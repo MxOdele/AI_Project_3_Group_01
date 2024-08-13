@@ -25,6 +25,7 @@ A data analysis class project for Columbia University's AI bootcamp.
 * [Data](#Data)
 * [Project Management](#Project-Management)
 * [Findings](#Findings)
+* [Citations and Licenses](#Citations-and-Licenses)
 
 ---
 
