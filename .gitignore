@@ -158,3 +158,13 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Ignore large files in Resources directory
+/Resources/business_dataset.csv
+/Resources/checkin_dataset.csv
+/Resources/reviews_dataset.csv
+/Resources/tip_dataset.csv
+/Resources/user_dataset.csv
+/Resources/Sentiment_Analysis.zip
+/model_sentiment/
+/Sentiment_Analysis/
