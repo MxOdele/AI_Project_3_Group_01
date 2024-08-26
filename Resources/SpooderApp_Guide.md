@@ -36,7 +36,7 @@ As noted, this demonstration provides a curated selection of businesses to illus
 #### *Future Considerations*
 
 If given more time to develop its features further, **SpooderApp™** was envisioned to meet the following milestones;
-- Allow for ad hoc searches of business and real-time web scraping
+- Allow for ad hoc searches of businesses and real-time web scraping
 - Retrieve a complete list of available reviews in lieu of the sampled up-to-fifty (=< 50)
 - Train `roberto` on a larger dataset than the six thousand (6,000) reviews provided
 - Brand and logo development (because a cute little spooder logo would be too adorable for words)
