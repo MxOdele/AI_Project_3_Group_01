@@ -61,32 +61,32 @@ The datasets cover aspects such as business information, customer check-ins, rev
 
 ### Dependencies
 List of Python packages required:
-•	python 3.x
-•	pandas
-•	numpy
-•	scipy
-•	nltk
-•	scikit-learn
-•	transformers
-•	evaluate
-•	torch
-•	tqdm
-•	accelerate
-•	huggingface_hub
-•	datasets
-•	matplotlib
-•	seaborn
-•	selenium
-•	beautifulsoup4
-•	gdown
-•	webdriver_manager
-•	dash
-•	json
+- **python 3.x
+- **pandas
+- **numpy
+- **scipy
+- **nltk
+- **scikit-learn
+- **transformers
+- **evaluate
+- **torch
+- **tqdm
+- **accelerate
+- **huggingface_hub
+- **datasets
+- **matplotlib
+- **seaborn
+- **selenium
+- **beautifulsoup4
+- **gdown
+- **webdriver_manager
+- **dash
+- **json
 Other items:
-•	Google Chrome
-•	.env file with appropriate API Keys for ChapGPT
-•	Prepared csv file with URLs of businessnes, latitude and longitude.
-•	Zipfile
+- **Google Chrome
+- **.env file with appropriate API Keys for ChapGPT
+- **Prepared csv file with URLs of businessnes, latitude and longitude.
+- **Zipfile
 
 ### Methods
 Data Management with gdown
