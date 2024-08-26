@@ -82,7 +82,7 @@ List of Python packages required:
 - **webdriver_manager**
 - **dash**
 - **json**
-Other items:
+- Other items:
 - **Google Chrome**
 - **.env file with appropriate API Keys for ChapGPT**
 - **Prepared csv file with URLs of businessnes, latitude and longitude.**
