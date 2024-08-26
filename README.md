@@ -147,11 +147,12 @@ This portion of the application is designed to perform sentiment analysis on bus
 ChromeDriver must be installed on your system to run the web scraping for business information, along with pandas, selenium, and beautifulsoup4.
 
 This is a Python-based web scraper designed to extract business details and customer reviews from Google Maps using Selenium and BeautifulSoup. The scraper navigates through multiple Google Maps URLs, collects business information such as names, ratings, addresses, and retrieves customer reviews. The extracted data is then organized into a structured format for further analysis.
+
 Script functions:
-    **Setup WebDriver**: Initalizes a Selenium Web to interact with web pages.
-    **Navigate and Extract Data**: Accesses specific URLs to extract business details such as business name, average rating, and business address. Captures and parses customer reviews, text and ratings into a DataFrame.
-    **Data Handling**: Organizes and stores the extracted data in a structured format using pandas. 
-    **Automated Scrolling and Clicks**: Simulates user interction for loading more reviews.
+- **Setup WebDriver**: Initalizes a Selenium Web to interact with web pages.
+- **Navigate and Extract Data**: Accesses specific URLs to extract business details such as business name, average rating, and business address. Captures and parses customer reviews, text and ratings into a DataFrame.
+- **Data Handling**: Organizes and stores the extracted data in a structured format using pandas. 
+- **Automated Scrolling and Clicks**: Simulates user interction for loading more reviews.
     
 ---
 
