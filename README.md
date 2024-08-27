@@ -5,7 +5,7 @@ A data analysis class project 3 for Columbia University's AI bootcamp.
 
 <div align='center'>
     <img src='' height='300' title='Placeholder' alt='Placeholder' />
-## Yelp Business and Review Analysis ##
+## Leveraging Reviews to Understand Consumer Sentiments ##
 *Footnote of image*[^1]
 </div>
 
@@ -59,65 +59,152 @@ The datasets cover aspects such as business information, customer check-ins, rev
 | Modeling | Developed and fine-tuned machine learning models, primarily using BERT-based models, to classify and analyze sentiments. |
 | Spooder App | Built a web application using Dash to provide an interactive interface for analyzing business reviews. |
 
-### Dependencies
-Libraries Used:
-- **python 3.x**
-- **import pandas as pd**
-- **import numpy as np**
-- **import scipy as sp**
-- **import re**
-- **import nltk**
-- **from nltk.corpus import stopwords**
-- **from nltk.tokenize import word_tokenize**
-- 
-- **scikit-learn**
-- 
-- **import transformers**
-- **from transformers import DistilBertForSequenceClassification, DistilBertTokenizer**
-- **from transformers import AutoTokenizer**
-- **from transformers import DataCollatorWithPadding**
-- **from transformers import AutoModelForSequenceClassification**
-- **from transformers import TrainingArguments,Trainer**
-- **from transformers import pipeline**
-- **from evaluate import load**
-- **import torch**
-- **from tqdm import tqdm**
-- **import accelerate**
-- **from huggingface_hub import notebook_login**
-- **from datasets import Dataset**
-- **from datasets import load_metric**
-- **import matplotlib.pyplot as plt**
-- **import seaborn as sns**
-- **from selenium import webdriver**
-- **from selenium.webdriver.chrome.service import Service as ChromeService**
-- **from selenium.webdriver.support.ui import WebDriverWait**
-- **from selenium.webdriver.common.by import By**
-- **from selenium.webdriver.support import expected_conditions as EC**
-- **from bs4 import BeautifulSoup**
-- **import gdown**
-- **from webdriver_manager.chrome import ChromeDriverManager**
-- **dash**
-- **from dash import Dash, dcc, html, callback, callback_context**
-- **from dash.dependencies import Input, Output, State**
-- **from dash.exceptions import PreventUpdate**
-- **import dash_bootstrap_components as dbc**
-- **import plotly.express as px**
-- **import plotly.graph_objects as go**
-- **import json**
-- **import unicodedata**
-- **from sklearn.model_selection import train_test_split**
-- **from langchain_openai import ChatOpenAI**
-- **from langchain import PromptTemplate**
-- **from langchain.chains import LLMChain**
-- **from dotenv import load_dotenv**
-- **import os**
-- **import math**
-- **import time**
-- Other items:
-- **Google Chrome**
-- **.env file with appropriate API Keys for ChapGPT**
-- **Prepared csv file with URLs of businessnes, latitude and longitude.**
-- **import zipfile**
+### Instillations
+Installing necessary libraries 
+NOTE: Uncomment any libraries not currently present in your environment for
+####  initial execution of this notebook
+|  |  |
+| :--- | :--- |
+ |General utilities| |
+|# %pip install pandas --quiet                  |# Data manipulation and analysis|
+|# %pip install numpy --quiet                   |# Numerical computations|
+|# %pip install scipy --quiet                   |# Scientific computing|
+|# %pip install matplotlib --quiet              |# Plotting and visualization|
+|# %pip install seaborn --quiet                 |# Statistical data visualization|
+|# %pip install tqdm --quiet                    |# Progress bar for loops|
+|# %pip install gdown --quiet                   |# Downloading files from Google Drive|
+|# %pip install zipfile --quiet                 |# Working with zip files|
+|# %pip install json --quiet                    |# JSON handling|
+
+|  |  |
+| :--- | :--- |
+|Machine Learning & NLP| |
+|# %pip install torch --quiet                   |# PyTorch for deep learning|
+|# %pip install transformers --quiet            |# HuggingFace Transformers|
+|# %pip install datasets --quiet                |# HuggingFace Datasets|
+|# %pip install scikit-learn --quiet            |# Machine learning tools|
+|# %pip install nltk --quiet                    |# Natural Language Toolkit for text processing|
+|# %pip install accelerate --quiet              |# Accelerate training|
+|# %pip install evaluate --quiet                |# Metric evaluation|
+
+|  |  |
+| :--- | :--- |
+|# Web scraping| |
+|# %pip install selenium --quiet                |# Browser automation|
+|# %pip install webdriver-manager --quiet       |# Manage WebDriver binaries|
+|# %pip install beautifulsoup4 --quiet          |# Parsing HTML and XML|
+
+|# Environment & API
+|# %pip install python-dotenv --quiet           |# Load environment variables|
+|# %pip install langchain --quiet               |# OpenAI LangChain for AI models|
+
+|# Dash (Web App Framework)
+|# %pip install dash --quiet                      | # Dash core components|
+|# %pip install dash-bootstrap-components --quiet  |# Dash Bootstrap components|
+
+|# Plotting & Visualization
+|# %pip install plotly --quiet                  |# Interactive graphing library|
+
+|  |  |
+| :--- | :--- |
+|# Image Handling|
+|# %pip install opencv-python-headless --quiet  |# OpenCV for image processing|
+
+### Imports and Dependencies
+|  |  |
+| :--- | :--- |
+|# General Utilities| |
+|import pandas as pd               |# Data manipulation and analysis|
+|import os                         |# Operating system interfaces|
+|import re                         |# Regular expressions|
+|import json                       |# JSON handling|
+|import time                       |# Time management|
+|import zipfile                    |# Working with zip files|
+|import unicodedata                |# Unicode character handling|
+|import numpy as np                |# Numerical computations|
+|import scipy as sp                |# Scientific computing|
+|import gdown                      |# Google Drive file download|
+|from tqdm import tqdm             |# Progress bar for loops|
+|import base64                     |# Encoding and decoding binary data|
+|from io import BytesIO            |# Handling binary data in memory|
+
+|  |  |
+| :--- | :--- |
+|# Image Handling| |
+|import cv2                       |# OpenCV for image processing|
+|from PIL import Image            | # Image processing via PIL (for handling image conversion)|
+
+|  |  |
+| :--- | :--- |
+|# Plotting and Visualization| |
+|import matplotlib.pyplot as plt   |# Plotting and visualization|
+|import matplotlib.ticker as mtick |# Setting ticks to larger numbers|
+|import seaborn as sns             |# Statistical data visualization|
+|import plotly.express as px       |# Simple interactive plots|
+|import plotly.graph_objects as go |# Detailed interactive plots|
+
+|  |  |
+| :--- | :--- |
+|# Machine Learning & NLP| |
+|import torch                                          |# PyTorch for deep learning|
+|from sklearn.model_selection import train_test_split  |# Data splitting for training and testing|
+|from datasets import load_metric                      |# Compute metrics for NLP models|
+|import nltk                                           |# Natural Language Toolkit for text processing|
+|from nltk.corpus import stopwords                     |# Stop words for text preprocessing|
+|from nltk.tokenize import word_tokenize               |# Tokenization of text|
+|import transformers                                   |# HuggingFace Transformers|
+
+|  |  |
+| :--- | :--- |
+|# Pretrained Model and Tokenization| |
+|from transformers import DistilBertForSequenceClassification, DistilBertTokenizer  |# DistilBERT model and tokenizer|
+|from transformers import AutoTokenizer, AutoModelForSequenceClassification         |# Auto-tokenizer and model for sequence classification|
+|from transformers import DataCollatorWithPadding                                   |# Dynamic padding for batched data|
+|from transformers import TrainingArguments, Trainer                                |# Training arguments and trainer|
+|from transformers import pipeline                                                  |# Inference pipeline|
+
+|  |  |
+| :--- | :--- |
+|# Dataset Formatting| |
+|import accelerate                           |# Accelerate training|
+|from datasets import Dataset                |# Dataset handling|
+|from evaluate import load                   |# Metric evaluation|
+
+|  |  |
+| :--- | :--- |
+|# Web Scraping| |
+|from selenium import webdriver                                          |# Browser automation|
+|from selenium.webdriver.chrome.service import Service as ChromeService  |# WebDriver service for Chrome|
+|from selenium.webdriver.support.ui import WebDriverWait                 |# WebDriver wait|
+|from selenium.webdriver.common.by import By                             |# Locating elements by attributes|
+|from selenium.webdriver.support import expected_conditions as EC        |# Expected conditions for WebDriver waits|
+|from webdriver_manager.chrome import ChromeDriverManager                |# Manage WebDriver binaries|
+|from bs4 import BeautifulSoup                                           |# Parsing HTML and XML|
+
+|  |  |
+| :--- | :--- |
+|# Environment & API| |
+|from dotenv import load_dotenv              |# Load environment variables|
+|from langchain_openai import ChatOpenAI     |# OpenAI API for LangChain|
+
+|  |  |
+| :--- | :--- |
+|# Prompt Template and LLM Chain| |
+|from langchain import PromptTemplate        |# Prompt template for LangChain|
+|from langchain.chains import LLMChain       |# LLM Chain for linking models|
+
+|  |  |
+| :--- | :--- |
+|# Dash (Web App Framework)| |
+|from dash import Dash, dcc, html, callback, callback_context  |# Dash core components and callbacks|
+|from dash.dependencies import Input, Output, State            |# Dash dependencies for callbacks|
+|from dash.exceptions import PreventUpdate                     |# Prevent updates in callbacks|
+|import dash_bootstrap_components as dbc                       |# Dash Bootstrap components|
+
+|  |  |
+| :--- | :--- |
+|# Other| |
+|import math                      |# Mathematical functions|
 
 ### Methods
 Data Management with gdown
@@ -325,7 +412,17 @@ If, however, you are executing the notebook any subsequent time, comment out all
 
 ## Findings
 
-Placeholder
+<img src='Images/Disribution_of_Star_Ratings.png' title='Distribution_of Star Ratings' alt='Distribution_of Star Ratings' />
+<img src='Images/Disribution_of_Star_Ratings_Top_10_Business.png' title='Distribution_of Star Ratings Top 10' alt='Distribution_of Star Ratings Top 10' />
+<img src='Images/Distribution_of_Review_Counts.png' title='Distribution Review Counts' alt='Distribution Review Counts' />
+<img src='Images/Distribution_of_Sentiment_Labels.png' title='Distribution of Sentiment Labels' alt='Distribution of Sentiment Labels' />
+<img src='Images/Distribution_of_Sentiment_Scores.png' title='Distribution of Sentiment Scores' alt='Distribution of Sentiment Scores' />
+<img src='Images/Distribution_of_Top_20_Business_Categories.png' title='Distribution of Top 20 Business Categories' alt='Distribution of Top 20 Business Categories' />
+<img src='Images/NA_Percentage_Plot.png' title='NA Percentage Plot' alt='NA Percentage Plot' />
+<img src='Images/Sentiment Analysis img.png' title='Sentiment Analysis' alt='Sentiment Analysis' />
+<img src='Images/is_open_Feature_Count.png' title='is open Feature Count' alt='is open Feature Count' />
+<img src='Images/SpooderApp_Logo_Inverted_Color.png' title='SpooderApp Logo Inverted Color' alt='SpooderApp Logo Inverted Color' />
+<img src='Images/yelp&google AI generated img.png' title='Yelp & Google AI Generated image' alt='Yelp & Google AI Generated image' />
 
 ### Results
 - **Sentiment Classification Accuracy**: The final model, roberto achieved an accuracy  over 82% in classifying sentiments as positive, negative, or neutral
