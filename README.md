@@ -432,13 +432,13 @@ If, however, you are executing the notebook any subsequent time, comment out all
 
 ![Distribution NA Percentage Plot Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/NA_Percentage_Plot.png "NA Percentage Plot")
 
-![Distribution Sentiment Analysis Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Images/Sentiment_Analysis_img.png "Sentiment Analysis")
+![Distribution Sentiment Analysis Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Sentiment_Analysis_img.png "Sentiment Analysis")
 
-![is_open Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Images/is_open_Feature_Count.png "is open")
+![is_open Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/is_open_Feature_Count.png "is open")
 
-![SpooderApp Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Images/SpooderApp_Logo_Inverted_Color.png "SpooderApp")
+![SpooderApp Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/SpooderApp_Logo_Inverted_Color.png "SpooderApp")
 
-![Yelp&Google Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Images/Images/yelp&google_AI_generated_img.png "Yelp&Google")
+![Yelp&Google Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/yelp&google_AI_generated_img.png "Yelp&Google")
 
 
 ### Results
