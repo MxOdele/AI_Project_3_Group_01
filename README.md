@@ -94,13 +94,17 @@ NOTE: Uncomment any libraries not currently present in your environment for
 |# %pip install webdriver-manager --quiet       |# Manage WebDriver binaries|
 |# %pip install beautifulsoup4 --quiet          |# Parsing HTML and XML|
 
+|  |  |
+| :--- | :--- |
 |# Environment & API| |
 |# %pip install python-dotenv --quiet           |# Load environment variables|
 |# %pip install langchain --quiet               |# OpenAI LangChain for AI models|
 
-|# Dash (Web App Framework)
+|  |  |
+| :--- | :--- |
+|# Dash (Web App Framework)| |
 |# %pip install dash --quiet                      | # Dash core components|
-|# %pip install dash-bootstrap-components --quiet  |# Dash Bootstrap components|
+|# %pip install dash-bootstrap-components --quiet |# Dash Bootstrap components|
 
 |# Plotting & Visualization
 |# %pip install plotly --quiet                  |# Interactive graphing library|
@@ -214,14 +218,14 @@ The notebook json_conversion_for_gdown serves to convert our source files and te
 Original training data sources can be found at https://www.yelp.com/dataset
 
 This project includes multiple components such as data fetching, exploratory data analysis (EDA), data integration, web scraping, LangChain, and OpenAI:
-•	Data Fetching: Automated scripts to download data from Google Drive.
-•	EDA: Scripts for performing initial exploratory data analysis on the fetched data.
-•	Sentiment Analysis Using BERT-based Models: Use trained model on test dataset to predict sentiments
-•   Universal Business Review Sentiment Analysis
-•   Review Scraping: Scripts to scrape reviews and other details from Google Maps using Selenium and BeautifulSoup.
-•   Apply the Sentiment Analysis Model to the Web Scrapped Data
-•   Use Reviews from Selected Business to run ChatGPT Model
-•   Spooder Ap
+-•	Data Fetching: Automated scripts to download data from Google Drive.
+-•	EDA: Scripts for performing initial exploratory data analysis on the fetched data.
+-•	Sentiment Analysis Using BERT-based Models: Use trained model on test dataset to predict sentiments
+-•   Universal Business Review Sentiment Analysis
+-•   Review Scraping: Scripts to scrape reviews and other details from Google Maps using Selenium and BeautifulSoup.
+-•   Apply the Sentiment Analysis Model to the Web Scrapped Data
+-•   Use Reviews from Selected Business to run ChatGPT Model
+=•   Spooder Ap
 
 ---
 #### Placeholder for a step
