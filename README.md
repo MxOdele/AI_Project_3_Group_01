@@ -416,6 +416,9 @@ If, however, you are executing the notebook any subsequent time, comment out all
 
 ## Findings
 ![Distribution of Star Ratings](Images/Disribution_of_Star_Ratings.png)
+
+![Sample Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Disribution_of_Star_Ratings.png "This is a sample image")
+
 <img src='Images/Disribution_of_Star_Ratings.png' title='Distribution_of Star Ratings' alt='Distribution_of Star Ratings' />
 <img src='Images/Disribution_of_Star_Ratings_Top_10_Business.png' title='Distribution_of Star Ratings Top 10' alt='Distribution_of Star Ratings Top 10' />
 <img src='Images/Distribution_of_Review_Counts.png' title='Distribution Review Counts' alt='Distribution Review Counts' />
