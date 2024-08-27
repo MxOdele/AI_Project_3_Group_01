@@ -415,21 +415,31 @@ If, however, you are executing the notebook any subsequent time, comment out all
 6.  Consult onscreen guide in `SpooderApp™` interface for use.
 
 ## Findings
-![Distribution of Star Ratings](Images/Disribution_of_Star_Ratings.png)
 
-![Sample Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Disribution_of_Star_Ratings.png "This is a sample image")
 
-<img src='Images/Disribution_of_Star_Ratings.png' title='Distribution_of Star Ratings' alt='Distribution_of Star Ratings' />
-<img src='Images/Disribution_of_Star_Ratings_Top_10_Business.png' title='Distribution_of Star Ratings Top 10' alt='Distribution_of Star Ratings Top 10' />
-<img src='Images/Distribution_of_Review_Counts.png' title='Distribution Review Counts' alt='Distribution Review Counts' />
-<img src='Images/Distribution_of_Sentiment_Labels.png' title='Distribution of Sentiment Labels' alt='Distribution of Sentiment Labels' />
-<img src='Images/Distribution_of_Sentiment_Scores.png' title='Distribution of Sentiment Scores' alt='Distribution of Sentiment Scores' />
-<img src='Images/Distribution_of_Top_20_Business_Categories.png' title='Distribution of Top 20 Business Categories' alt='Distribution of Top 20 Business Categories' />
-<img src='Images/NA_Percentage_Plot.png' title='NA Percentage Plot' alt='NA Percentage Plot' />
-<img src='Images/Sentiment Analysis img.png' title='Sentiment Analysis' alt='Sentiment Analysis' />
-<img src='Images/is_open_Feature_Count.png' title='is open Feature Count' alt='is open Feature Count' />
-<img src='Images/SpooderApp_Logo_Inverted_Color.png' title='SpooderApp Logo Inverted Color' alt='SpooderApp Logo Inverted Color' />
-<img src='Images/yelp&google AI generated img.png' title='Yelp & Google AI Generated image' alt='Yelp & Google AI Generated image' />
+![Distribution Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Disribution_of_Star_Ratings.png "Distribution of Star Ratings")
+
+![Distribution Top 10 Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Disribution_of_Star_Ratings_Top_10_Business.png "Distribution of Star Ratings Top 10")
+
+![Distribution Review Counts Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Distribution_of_Review_Counts.png "Distribution of Review Counts")
+
+
+![Distribution Sentiment Labels Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Distribution_of_Sentiment_Labels.png "Distribution of Sentiment Labels")
+
+![Distribution Sentiment Scores Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Distribution_of_Sentiment_Scores.png "Distribution of Sentiment Scores")
+
+![Distribution Top 20 Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Distribution_of_Top_20_Business_Categories.png "Distribution of Top 20 Business Categories")
+
+![Distribution NA Percentage Plot Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/NA_Percentage_Plot.png "NA Percentage Plot")
+
+![Distribution Sentiment Analysis Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Images/Sentiment_Analysis_img.png "Sentiment Analysis")
+
+![is_open Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Images/is_open_Feature_Count.png "is open")
+
+![SpooderApp Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Images/SpooderApp_Logo_Inverted_Color.png "SpooderApp")
+
+![Yelp&Google Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Images/Images/yelp&google_AI_generated_img.png "Yelp&Google")
+
 
 ### Results
 - **Sentiment Classification Accuracy**: The final model, roberto achieved an accuracy  over 82% in classifying sentiments as positive, negative, or neutral
