@@ -94,7 +94,7 @@ NOTE: Uncomment any libraries not currently present in your environment for
 |# %pip install webdriver-manager --quiet       |# Manage WebDriver binaries|
 |# %pip install beautifulsoup4 --quiet          |# Parsing HTML and XML|
 
-|# Environment & API
+|# Environment & API| |
 |# %pip install python-dotenv --quiet           |# Load environment variables|
 |# %pip install langchain --quiet               |# OpenAI LangChain for AI models|
 
