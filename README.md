@@ -217,20 +217,20 @@ The notebook json_conversion_for_gdown serves to convert our source files and te
 
 Original training data sources can be found at https://www.yelp.com/dataset
 
-This project includes multiple components such as data fetching, exploratory data analysis (EDA), data integration, web scraping, LangChain, and OpenAI:
--•	Data Fetching: Automated scripts to download data from Google Drive.
--•	EDA: Scripts for performing initial exploratory data analysis on the fetched data.
--•	Sentiment Analysis Using BERT-based Models: Use trained model on test dataset to predict sentiments
--•   Universal Business Review Sentiment Analysis
--•   Review Scraping: Scripts to scrape reviews and other details from Google Maps using Selenium and BeautifulSoup.
--•   Apply the Sentiment Analysis Model to the Web Scrapped Data
--•   Use Reviews from Selected Business to run ChatGPT Model
-=•   Spooder Ap
+This project includes multiple components such as data fetching, exploratory data analysis (EDA), data integration, BERT-based Models, web scraping, LangChain, and OpenAI:
+- **Data Fetching: Automated scripts to download data from Google Drive.**
+- **EDA: Scripts for performing initial exploratory data analysis on the fetched data.**
+- **Sentiment Analysis Using BERT-based Models: Use trained model on test dataset to predict sentiments**
+- **Universal Business Review Sentiment Analysis**
+- **Review Scraping: Scripts to scrape reviews and other details from Google Maps using Selenium and BeautifulSoup.**
+- **Apply the Sentiment Analysis Model to the Web Scrapped Data**
+- **se Reviews from Selected Business to run ChatGPT Model**
+- **Spooder Ap**
 
 ---
-#### Placeholder for a step
+#### Steps
 Detailed Steps
-1.	Fetching Data: Use the provided scripts to download datasets from Google Drive. Alternatively, the the data can be directly download from https://www.yelp.com/dataset and processed, dependent on the user's computing power and graphic card. Uncomment appropriate code if datasets are download directly. The 5 datasets from Yelp contain Business dataset, Checkin dataset, Reviews dataset, Tips dataset, and User dataset.
+1.	Fetching Data: Use the provided scripts to download datasets from Google Drive. Alternatively, the data can be directly download from https://www.yelp.com/dataset and processed, dependent on the user's computing power and graphic card. Uncomment appropriate code if datasets are download directly. The 5 datasets from Yelp contain Business dataset, Checkin dataset, Reviews dataset, Tips dataset, and User dataset.
    
 def fetch_data(set):  # Function to access datasets through `gdown`
 ________________________________________________________________________________________________________________________________________________________________
@@ -266,15 +266,15 @@ ________________________________________________________________________________
  - **Model Deployment**: Use trained model on test dataset to predict sentiments.
 
 Star ratings were encoded into 3 categories using label encoding. 
-•	0 for negative (1, 2 stars)
-•	1 for neutral (3 stars)
-•	2 for positive (4, 5 stars)
+-	0 for negative (1, 2 stars)
+-	1 for neutral (3 stars)
+-	2 for positive (4, 5 stars)
 
 Sample Evaluation Metrics:
-•	Accuracy: 0.8169
-•	Precision: 0.8175
-•	Recall: 0.8169
-•	F1 Score: 0.8171
+-	Accuracy: 0.8169
+-	Precision: 0.8175
+-	Recall: 0.8169
+-	F1 Score: 0.8171
 
 ### Main Functions:
 | Function | Details |
@@ -415,7 +415,7 @@ If, however, you are executing the notebook any subsequent time, comment out all
 6.  Consult onscreen guide in `SpooderApp™` interface for use.
 
 ## Findings
-
+![Distribution of Star Ratings](Images/Disribution_of_Star_Ratings.png)
 <img src='Images/Disribution_of_Star_Ratings.png' title='Distribution_of Star Ratings' alt='Distribution_of Star Ratings' />
 <img src='Images/Disribution_of_Star_Ratings_Top_10_Business.png' title='Distribution_of Star Ratings Top 10' alt='Distribution_of Star Ratings Top 10' />
 <img src='Images/Distribution_of_Review_Counts.png' title='Distribution Review Counts' alt='Distribution Review Counts' />
