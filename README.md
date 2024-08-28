@@ -4,7 +4,7 @@
 
 ![SpooderApp™ Logo, a stylized spider in shades of pink with the app name beside it in bold, white lettering](Images/SpooderApp_Logo_Inverted_Color.png)
 
-#### *Leveraging Reviews to Understand Consumer Sentiments*
+## *Leveraging Reviews to Understand Consumer Sentiments*
 *Powered by* `roberto` *and* `davidlingo`
 </div>
 
