@@ -416,8 +416,6 @@ If, however, you are executing the notebook any subsequent time, comment out all
 
 ![NA Percentage Plot](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/NA_Percentage_Plot.png?raw=true)
 
-![Sentiment Analysis](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Sentiment%20Analysis%20img.png?raw=true)
-
 ![Is Open Feature Count](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/is_open_Feature_Count.png?raw=true)
 
 
