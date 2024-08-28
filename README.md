@@ -23,7 +23,8 @@
 * [Project Details](#Project-Details)
 * [Project Management](#Project-Management)
 * [Execution](#Execution)
-* [Citations and Licenses](#Citations-and-Licenses)
+* [Conclusion](#Conclusion)
+* [Citations](#Citations)
 
 ---
 
