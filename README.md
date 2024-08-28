@@ -21,9 +21,8 @@
 # Table of Contents
 
 * [Project Details](#Project-Details)
-* [Data](#Data)
 * [Project Management](#Project-Management)
-* [Findings](#Findings)
+* [Execution](#Execution)
 * [Citations and Licenses](#Citations-and-Licenses)
 
 ---
@@ -175,14 +174,19 @@ This project includes multiple components such as data fetching, exploratory dat
 - **Spooder Ap**
 
 ---
+
 # Execution
 *Detailed steps of the notebook's execution*
 
-1.	Fetching Data: Use the provided scripts to download datasets from Google Drive. Alternatively, the data can be directly download from https://www.yelp.com/dataset and processed, dependent on the user's computing power and graphic card. Uncomment appropriate code if datasets are download directly. The 5 datasets from Yelp contain Business dataset, Checkin dataset, Reviews dataset, Tips dataset, and User dataset.
-   
-def fetch_data(set):  # Function to access datasets through `gdown`
-________________________________________________________________________________________________________________________________________________________________
-2.  Performing EDA: Analyze the data to uncover insights and prepare for further processing.
+## Fetching Data:
+
+Use the provided scripts to download datasets from Google Drive. Alternatively, the data can be directly download from https://www.yelp.com/dataset and processed, dependent on the user's computing power and graphic card. Uncomment appropriate code if datasets are download directly. The 5 datasets from Yelp contain Business dataset, Checkin dataset, Reviews dataset, Tips dataset, and User dataset.
+
+---
+
+## Performing EDA:
+
+Analyze the data to uncover insights and prepare for further processing.
     We began by loading and examining the following datasets:
 - **Business Dataset**: Contains business data including location data, attributes, and categories.
 - **Checkin Dataset**: Contains check-in data on businesses (not used in final analysis due to low relevance).
@@ -193,9 +197,9 @@ ________________________________________________________________________________
 The data was preprocessed by removing irrelevant columns, renaming variables, and merging relevant datasets for further analysis.  The final merged dataset prepared for machine learning included business id, stars, for rating purposes, review text for NLP tasks, stars average ratings, and other relevant buiness metadata.
 
 ### Main Functions:
-| Function | Details |
+| **Function** | *Details* |
 | :--- | :--- |
-|fetch_data(set) |Downloads and reads datasets into DataFrames.|
+| fetch_data(set) |Downloads and reads datasets into DataFrames.|
 |pd.read_csv() |Reads CSV files into DataFrames.|
 |DataFrame.head() |Displays the first few rows of the DataFrame.|
 |DataFrame.info() |Provides a summary of the DataFrame, including data types and non-null counts.|
@@ -205,8 +209,13 @@ The data was preprocessed by removing irrelevant columns, renaming variables, an
 |DataFrame.merge() |Merges multiple DataFrames to create a consolidated dataset.|
 |seaborn.barplot() |Visualizes missing data percentages.|
 |DataFrame.replace() |Combines and reduces the number of categories for target variables.|
-_______________________________________________________________________________________________________________________________________________________________
-3. Sentiment Analysis Using BERT-based Models
+
+---
+
+## Modeling
+
+Sentiment Analysis Using BERT-based Models:
+
  - **Data Sampling and Preparation**: The dataset was balanced by sampling Yelp reviews based on their star ratings.
  - **Test Preprocessing**: Cleaning and normalizing text data for modal processing.
  - **Model Training**: Pre-trained DistilBERT model for sentiment classification.
@@ -244,7 +253,8 @@ Sample Evaluation Metrics:
 |model.save_pretrained() and tokenizer.save_pretrained()| Saves the trained model and tokenizer.|
 |gdown.download() and zipfile.ZipFile()| Downloads and extracts the pre-trained model from Google Drive.|
 
-____________________________________________________________________________________________________________________________________________________________
+---
+
 4. Universal Business Review Sentiment Analysis
 This portion of the application is designed to perform sentiment analysis on business reviews. It classifies reviews into positive, neutral or negative and provides confidence scoress for each classification. While trained on Yelp! data, and developed for Google Reviews, the goal of the application is to be as univerally applicable to business reviews as possible - regardless of the source. 
 - **Sentiment Analysis**: Using a pre-trained model nick named "reobert" to analyze sentiment of reviews and assigns a sentiment lable of positive, neutral, or negative.
