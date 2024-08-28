@@ -278,17 +278,28 @@ Sample Evaluation Metrics:
 
 <div align='center'>
 
-<img src="Images/Distribution_of_Sentiment_Labels.png" alt="Distribution of Sentiment Labels">
+<img src="Images/Distribution_of_Sentiment_Labels.png" title ='Distribution of Sentiment Labels' alt="Distribution of Sentiment Labels">
 
 *Visualizing the returned distribution of setniment lables after applying a <abbr title='Actually, the same dataset `roberto` was trained on'>balanced dataset</abbr> through* `roberto`
 
-<img src="Images/Distribution_of_Sentiment_Scores.png" alt="Distribution of Sentiment Scores">
+<img src="Images/Distribution_of_Sentiment_Scores.png" title="Distribution of Sentiment Scores" alt="Distribution of Sentiment Scores">
 
 *Illustrating the returned distribution of <abbr title="`roberto` doesn't like 'neutral' and 'negative' reviews the way it likes 'positive'">model confidence</abbr> after processing*
 
 </div>
 
 ## Scraping Reviews:
+
+### User Defined Functions:
+*declared in this section*
+| `apply_roberto()` | Generates sentiment analysis for reviews in a given dataset, and a confidence in that sentiment |
+| `business_names_list()` | Generates a list of unique business names from a given dataset |
+| `reviews_list()` | Generates a list of all reviews submitted to a business for all its locations |
+| `general_sentiment()` | Classifies the general sentiment for a business' reviews and provides a mean confidence in that sentiment <br> *Note: To be run after a DataFrame has been passed through* `apply_roberto()` |
+| `get_business_overview()` | Extracts business overview details from a webpage using BeaugtifulSoup and Selenium. |
+| `read_csv_with_error_handling()` | Reads a CSV file into a pandas DataFrame with error handling for common file-related issues. |
+| `get_review_summary()` | Gathers and summarizes review data from a set of review elements parsed from HTML. |
+| `web_Scraper()` | Scrapes Google Maps via web driver and gather business information and reviews for the list of businesses in the imported file. |
 
 Utilize Selenium to scrape reviews from specified Google Maps URLs ChromeDriver must be installed on your system to run the web scraping for business information, along with pandas, selenium, and beautifulsoup4.
 
@@ -331,6 +342,40 @@ Dash was used to develop an interactive, web-based application to explore custom
 * **Sentiment Classification Accuracy**: The final model, roberto achieved an accuracy  over 82% in classifying sentiments as positive, negative, or neutral
 * **Actionable Feedback**: The OpenAI LangChain model, davidlingo, effectively summarizes available reviews and provides consumer-driven recommendations for improvements to operations, regardless of business scale.
 * **User Engagement and interaction**: The deployment of the sentiment analysis model into a Dash web application allowed users to interactively explore data. Feedback from user sessions can highlight the application's utility in providing immediate sentiment insights, which can be particualry useful for business owners and manager.
+
+---
+
+# SpooderApp™
+
+Below is a more detailed overview of `SpooderApp™`'s presentaion and operation:
+
+<div align='center'>
+
+<img src="Images/App_Screenshots_01_Landing_Page.png" title='SpooderApp™ landing page' alt="SpooderApp™ landing page with a colorful gradient background and the SpooderApp™ logo featuring a stylized spider icon. The page displays a header with the tagline 'Leveraging business reviews to gain insights for potential improvements.' Below are interactive elements including a dropdown to select a business, an average rating section, total available reviews, a map area to show locations, and tabs for 'Reviews', 'Sentiment Analysis', and 'Feedback'.">
+
+*Here we see the initial loading state of* `SpooderApp™`
+
+<img src="Images/App_Screenshots_02_Menu_Selection.png" title='Making a dropdown selection' alt="SpooderApp™ interface showing the dropdown menu expanded under 'Select a business' with options like 'Dulce De Leche Bakery', 'Olga's Diner', 'Houlihan's', 'Rumba Cubana', etc. The same interactive map and sections for reviews, sentiment analysis, and feedback are visible, with no specific business selected yet.">
+
+*Users will make a selection from the dropdown menu located in the top left*
+
+<img src="Images/App_Screenshots_03_Loaded_Information.png" title='Initially loaded information and available reviews' alt="SpooderApp™ interface displaying the selected business 'Dulce De Leche Bakery'. The map shows the location around New York City, and the 'Reviews' tab is open, showing three customer reviews with addresses and detailed comments on their experiences at the bakery. Average rating is shown as 4.7, and total available reviews count is 100.">
+
+*Once a selection is made, the pertinent business information loads accordingly - including metrics and a list of available reviews*
+
+<img src="Images/App_Screenshots_04_Sentiment_Analysis.png" title='Sentiment analysis results' alt="SpooderApp™ interface showing the 'Sentiment Analysis' tab for 'Dulce De Leche Bakery' with a map of the New York City area. The sentiment analysis section reads, 'The general sentiment is strongly positive, with an average confidence of 74.5%.' This provides a summarized view of the overall customer feedback sentiment.">
+
+*Sleceting the 'Sentiment Analysis' accordion menu will display the results of* `roberto` *processing the available reviews*
+
+<img src="Images/App_Screenshots_05_Summary_and_Feedback.png" title='Generated summary and recommendations' alt="SpooderApp™ interface displaying the 'Feedback' tab for 'Dulce De Leche Bakery' with a map of New York City. The summary section highlights key points from customer reviews, mentioning both positive aspects like delicious cakes and pastries and areas for improvement such as food quality and customer service. Recommendations for improvement are also provided below the summary.">
+
+*Clicking 'Feedback' will display the summary and recommendations generated by* `davidlingo`
+
+<img src="Images/App_Screenshots_06_App_Guide.png" title='In-app user guide and information' alt="SpooderApp™ guide page with an introduction and detailed description of how to use the application. Sections include 'Introduction', 'How to Use', 'Features', 'Under the Hood', and 'Limitations'. The guide explains the use of Machine Learning and Natural Language Processing to analyze customer reviews and provide actionable feedback for businesses.">
+
+*Below the user interface, an in-app guide provides instructions for use and information about* `SpooderApp™`
+
+</div>
 
 ---
 
