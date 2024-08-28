@@ -62,102 +62,102 @@ Installing necessary libraries
 
 | **General Utilities** | *Notes* |
 | :--- | :--- |
-|# %pip install pandas --quiet                  |# Data manipulation and analysis|
-|# %pip install numpy --quiet                   |# Numerical computations|
-|# %pip install scipy --quiet                   |# Scientific computing|
-|# %pip install matplotlib --quiet              |# Plotting and visualization|
-|# %pip install seaborn --quiet                 |# Statistical data visualization|
-|# %pip install tqdm --quiet                    |# Progress bar for loops|
-|# %pip install gdown --quiet                   |# Downloading files from Google Drive|
-|# %pip install zipfile --quiet                 |# Working with zip files|
-|# %pip install json --quiet                    |# JSON handling|
+| `%pip install pandas --quiet` | Data manipulation and analysis|
+| `%pip install numpy --quiet` | Numerical computations|
+|` %pip install scipy --quiet` | Scientific computing|
+| `%pip install matplotlib --quiet` | Plotting and visualization|
+| `%pip install seaborn --quiet` | Statistical data visualization|
+| `%pip install tqdm --quiet` | Progress bar for loops|
+| `%pip install gdown --quiet` | Downloading files from Google Drive|
+| `%pip install zipfile --quiet` | Working with zip files|
+| `%pip install json --quiet` | JSON handling|
 | **Machine Learning & NLP** | *Notes* |
-|# %pip install torch --quiet                   |# PyTorch for deep learning|
-|# %pip install transformers --quiet            |# HuggingFace Transformers|
-|# %pip install datasets --quiet                |# HuggingFace Datasets|
-|# %pip install scikit-learn --quiet            |# Machine learning tools|
-|# %pip install nltk --quiet                    |# Natural Language Toolkit for text processing|
-|# %pip install accelerate --quiet              |# Accelerate training|
-|# %pip install evaluate --quiet                |# Metric evaluation|
+| `%pip install torch --quiet` | PyTorch for deep learning|
+| `%pip install transformers --quiet` | HuggingFace Transformers|
+| `%pip install datasets --quiet` | HuggingFace Datasets|
+| `%pip install scikit-learn --quiet` | Machine learning tools|
+| `%pip install nltk --quiet` | Natural Language Toolkit for text processing|
+| `%pip install accelerate --quiet` | Accelerate training|
+| `%pip install evaluate --quiet` | Metric evaluation|
 | **Web Scraping** | *Notes* |
-|# %pip install selenium --quiet                |# Browser automation|
-|# %pip install webdriver-manager --quiet       |# Manage WebDriver binaries|
-|# %pip install beautifulsoup4 --quiet          |# Parsing HTML and XML|
+| `%pip install selenium --quiet` | Browser automation|
+| `%pip install webdriver-manager --quiet` | Manage WebDriver binaries|
+| `%pip install beautifulsoup4 --quiet` | Parsing HTML and XML|
 | **Environment & API** | *Notes* |
-|# %pip install python-dotenv --quiet           |# Load environment variables|
-|# %pip install langchain --quiet               |# OpenAI LangChain for AI models|
+| `%pip install python-dotenv --quiet` | Load environment variables|
+| `%pip install langchain --quiet` | OpenAI LangChain for AI models|
 | **Dash (Web App Framework)** | *Notes* |
-|# %pip install dash --quiet                      | # Dash core components|
-|# %pip install dash-bootstrap-components --quiet |# Dash Bootstrap components|
+| `%pip install dash --quiet` | # Dash core components|
+| `%pip install dash-bootstrap-components --quiet` | Dash Bootstrap components|
 | **Plotting & Visualization** | *Notes* |
-|# %pip install plotly --quiet                  |# Interactive graphing library|
+| `%pip install plotly --quiet` | Interactive graphing library|
 | **Image Handling** | *Notes* |
-|# %pip install opencv-python-headless --quiet  |# OpenCV for image processing|
+| `%pip install opencv-python-headless --quiet` | OpenCV for image processing|
 
 ## Imports and Dependencies
 | **General Utilities** | *Notes* |
 | :--- | :--- |
-|import pandas as pd               |# Data manipulation and analysis|
-|import os                         |# Operating system interfaces|
-|import re                         |# Regular expressions|
-|import json                       |# JSON handling|
-|import time                       |# Time management|
-|import zipfile                    |# Working with zip files|
-|import unicodedata                |# Unicode character handling|
-|import numpy as np                |# Numerical computations|
-|import scipy as sp                |# Scientific computing|
-|import gdown                      |# Google Drive file download|
-|from tqdm import tqdm             |# Progress bar for loops|
-|import base64                     |# Encoding and decoding binary data|
-|from io import BytesIO            |# Handling binary data in memory|
+| `import pandas as pd` | Data manipulation and analysis |
+| `import os` | Operating system interfaces |
+| `import re` | Regular expressions |
+| `import json` | JSON handling |
+| `import time` | Time management |
+| `import zipfile` | Working with zip files |
+| `import unicodedata` | Unicode character handling |
+| `import numpy as np` | Numerical computations |
+| `import scipy as sp` | Scientific computing |
+| `import gdown` | Google Drive file download |
+| `from tqdm import tqdm` | Progress bar for loops |
+| `import base64` | Encoding and decoding binary data |
+| `from io import BytesIO` | Handling binary data in memory |
 | **Image Handling** | *Notes* |
-|import cv2                       |# OpenCV for image processing|
-|from PIL import Image            | # Image processing via PIL (for handling image conversion)|
+| `import cv2` | OpenCV for image processing |
+| `from PIL import Image` | Image processing via PIL (for handling image conversion) |
 | **Plotting and Visualization** | *Notes* |
-|import matplotlib.pyplot as plt   |# Plotting and visualization|
-|import matplotlib.ticker as mtick |# Setting ticks to larger numbers|
-|import seaborn as sns             |# Statistical data visualization|
-|import plotly.express as px       |# Simple interactive plots|
-|import plotly.graph_objects as go |# Detailed interactive plots|
+| `import matplotlib.pyplot as plt` | Plotting and visualization |
+| `import matplotlib.ticker as mtick` | Setting ticks to larger numbers |
+| `import seaborn as sns` | Statistical data visualization |
+| `import plotly.express as px` | Simple interactive plots |
+| `import plotly.graph_objects as go` | Detailed interactive plots |
 | **Machine Learning & NLP** | *Notes* |
-|import torch                                          |# PyTorch for deep learning|
-|from sklearn.model_selection import train_test_split  |# Data splitting for training and testing|
-|from datasets import load_metric                      |# Compute metrics for NLP models|
-|import nltk                                           |# Natural Language Toolkit for text processing|
-|from nltk.corpus import stopwords                     |# Stop words for text preprocessing|
-|from nltk.tokenize import word_tokenize               |# Tokenization of text|
-|import transformers                                   |# HuggingFace Transformers|
+| `import torch` | PyTorch for deep learning |
+| `from sklearn.model_selection import train_test_split` | Data splitting for training and testing |
+| `from datasets import load_metric` | Compute metrics for NLP models |
+| `import nltk` | Natural Language Toolkit for text processing |
+| `from nltk.corpus import stopwords` | Stop words for text preprocessing |
+| `from nltk.tokenize import word_tokenize` | Tokenization of text |
+| `import transformers` | HuggingFace Transformers |
 | **Pretrained Model and Tokenization** | *Notes* |
-|from transformers import DistilBertForSequenceClassification, DistilBertTokenizer  |# DistilBERT model and tokenizer|
-|from transformers import AutoTokenizer, AutoModelForSequenceClassification         |# Auto-tokenizer and model for sequence classification|
-|from transformers import DataCollatorWithPadding                                   |# Dynamic padding for batched data|
-|from transformers import TrainingArguments, Trainer                                |# Training arguments and trainer|
-|from transformers import pipeline                                                  |# Inference pipeline|
+| `from transformers import DistilBertForSequenceClassification, DistilBertTokenizer` | DistilBERT model and tokenizer |
+| `from transformers import AutoTokenizer, AutoModelForSequenceClassification` | Auto-tokenizer and model for sequence classification |
+| `from transformers import DataCollatorWithPadding` | Dynamic padding for batched data |
+| `from transformers import TrainingArguments, Trainer` | Training arguments and trainer |
+| `from transformers import pipeline` | Inference pipeline |
 | **Dataset Formatting** | *Notes* |
-|import accelerate                           |# Accelerate training|
-|from datasets import Dataset                |# Dataset handling|
-|from evaluate import load                   |# Metric evaluation|
+| `import accelerate` | Accelerate training |
+| `from datasets import Dataset` | Dataset handling |
+| `from evaluate import load` | Metric evaluation |
 | **Web Scraping** | *Notes* |
-|from selenium import webdriver                                          |# Browser automation|
-|from selenium.webdriver.chrome.service import Service as ChromeService  |# WebDriver service for Chrome|
-|from selenium.webdriver.support.ui import WebDriverWait                 |# WebDriver wait|
-|from selenium.webdriver.common.by import By                             |# Locating elements by attributes|
-|from selenium.webdriver.support import expected_conditions as EC        |# Expected conditions for WebDriver waits|
-|from webdriver_manager.chrome import ChromeDriverManager                |# Manage WebDriver binaries|
-|from bs4 import BeautifulSoup                                           |# Parsing HTML and XML|
+| `from selenium import webdriver` | Browser automation |
+| `from selenium.webdriver.chrome.service import Service as ChromeService` | WebDriver service for Chrome |
+| `from selenium.webdriver.support.ui import WebDriverWait` | WebDriver wait |
+| `from selenium.webdriver.common.by import By` | Locating elements by attributes |
+| `from selenium.webdriver.support import expected_conditions as EC` | Expected conditions for WebDriver waits |
+| `from webdriver_manager.chrome import ChromeDriverManager` | Manage WebDriver binaries |
+| `from bs4 import BeautifulSoup` | Parsing HTML and XML |
 | **Environment & API** | *Notes* |
-|from dotenv import load_dotenv              |# Load environment variables|
-|from langchain_openai import ChatOpenAI     |# OpenAI API for LangChain|
+| `from dotenv import load_dotenv` | Load environment variables |
+| `from langchain_openai import ChatOpenAI` | OpenAI API for LangChain |
 | **Prompt Template and LLM Chain** | *Notes* |
-|from langchain import PromptTemplate        |# Prompt template for LangChain|
-|from langchain.chains import LLMChain       |# LLM Chain for linking models|
+| `from langchain import PromptTemplate` | Prompt template for LangChain |
+| `from langchain.chains import LLMChain` | LLM Chain for linking models |
 | **Dash (Web App Framework)** | *Notes* |
-|from dash import Dash, dcc, html, callback, callback_context  |# Dash core components and callbacks|
-|from dash.dependencies import Input, Output, State            |# Dash dependencies for callbacks|
-|from dash.exceptions import PreventUpdate                     |# Prevent updates in callbacks|
-|import dash_bootstrap_components as dbc                       |# Dash Bootstrap components|
+| `from dash import Dash, dcc, html, callback, callback_context` | Dash core components and callbacks |
+| `from dash.dependencies import Input, Output, State` | Dash dependencies for callbacks |
+| `from dash.exceptions import PreventUpdate` | Prevent updates in callbacks |
+| `import dash_bootstrap_components as dbc` | Dash Bootstrap components |
 | **Other** | *Notes* |
-|import math                      |# Mathematical functions|
+| `import math` | Mathematical functions |
 
 ### Methods
 Data Management with gdown due to the large size of the training files required for our models, alternative storage solutions to Git were necessary as a result of storage limits. We selected `gdown` for its integration with Google Drive.
@@ -287,10 +287,10 @@ Script functions:
 ### Main Functions:
 | Function | Details |
 | :--- | :--- |
-|business_Overview(business_name, avg_rating, address1, lat, long, df)  |#Creates a DataFrame with business details such as name, average rating, address, latitude, and longitude.|
-|get_review_summary(result_set) |#Extracts review text and ratings from the parsed HTML content and returns a DataFrame with this data.|
-|Web Scraping with Selenium  |#Automates the browser to navigate through a list of Google Maps URLs, extract business information, and load reviews.|
-|Data Aggregation   |#Combines individual DataFrames from multiple businesses into a single DataFrame (spooder_df) for consolidated data analysis.|
+|business_Overview(business_name, avg_rating, address1, lat, long, df)  |Creates a DataFrame with business details such as name, average rating, address, latitude, and longitude.|
+|get_review_summary(result_set) |Extracts review text and ratings from the parsed HTML content and returns a DataFrame with this data.|
+|Web Scraping with Selenium  |Automates the browser to navigate through a list of Google Maps URLs, extract business information, and load reviews.|
+|Data Aggregation   |Combines individual DataFrames from multiple businesses into a single DataFrame (spooder_df) for consolidated data analysis.|
 
 ---
 6.  Apply the Sentiment Analysis Model to the Web Scrapped Data
