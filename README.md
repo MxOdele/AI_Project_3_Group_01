@@ -414,7 +414,7 @@ If, however, you are executing the notebook any subsequent time, comment out all
 5.  `Run All Cells` to execute the code in every cell of the notebook in sequence. Alternatively, each cell may be `Run` on its own, though it is still recommended to run them in order.  *Note: This will launch the application* `SpooderApp™` *in your default browser.*
 6.  Consult onscreen guide in `SpooderApp™` interface for use.
 
-## Findings
+
 ## Visuals and Graphs
 ![A graph showing the distribution of star ratings](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Star_Ratings.png?raw=true)
 
