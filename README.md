@@ -2,7 +2,7 @@
 
 <div align='center'>
 
-![SpooderApp™ Logo, a stylized spider in shades of pink with the app name beside it in bold, white lettering](Images/SpooderApp_Logo_Inverted_Color.png)
+<img src="Images/SpooderApp_Logo_Inverted_Color.png" title='The SpooderApp™ Logo' alt="SpooderApp™ Logo, a stylized spider in shades of pink with the app name beside it in bold, white lettering">
 
 ## *Leveraging Reviews to Understand Consumer Sentiments*
 *Powered by* `roberto` *and* `davidlingo`
@@ -209,17 +209,33 @@ Analyze the data to uncover insights and prepare for further processing.
 
 The data was preprocessed by removing irrelevant columns, renaming variables, and merging relevant datasets for further analysis.  The final merged dataset prepared for machine learning included business id, stars, for rating purposes, review text for NLP tasks, stars average ratings, and other relevant buiness metadata.
 
-![A graph showing the distribution of star ratings](Images/Disribution_of_Star_Ratings.png)
+<div align='center'>
 
-![Distribution of Star Ratings for Top 10 Businesses](Images/Disribution_of_Star_Ratings_Top_10_Business.png)
+<img src="Images/NA_Percentage_Plot.png" title="NA Percentage Plot" alt="NA Percentage Plot">
 
-![Distribution of Review Counts](Images/Distribution_of_Review_Counts.png)
+*Confirming percentage of missing records from several features*
 
-![Distribution of Top 20 Business Categories](Images/Distribution_of_Top_20_Business_Categories.png)
+<img src="Images/is_open_Feature_Count.png" title="Is Open Feature Count" alt="Is Open Feature Count">
 
-![NA Percentage Plot](Images/NA_Percentage_Plot.png)
+*Confirming the balance of the* `is_open` *feature*
 
-![Is Open Feature Count](Images/is_open_Feature_Count.png)
+<img src="Images/Disribution_of_Star_Ratings.png" title='A graph showing the distribution of star ratings' alt="A graph showing the distribution of star ratings, ranging from 1 to 5 stars, with 5 being the highest value and 3 being the lowest">
+
+*Showing the distribution of star ratings across reviews dataset*
+
+<img src="Images/Disribution_of_Star_Ratings_Top_10_Business.png" title="Distribution of Star Ratings for Top 10 Businesses" alt="Distribution of Star Ratings for Top 10 Businesses">
+
+*Illustrating the top <abbr title='We all saw Starbucks coming...'>ten (10) businesses</abbr> by review count*
+
+<img src="Images/Distribution_of_Review_Counts.png" title="Distribution of Review Counts" alt="Distribution of Review Counts">
+
+*Comparing how many businesses have how many reviews*
+
+<img src="Images/Distribution_of_Top_20_Business_Categories.png" title="Distribution of Top 20 Business Categories" alt="Distribution of Top 20 Business Categories">
+
+*Number of businesses in the top twenty (20) business categories*
+
+</div>
 
 ## Modeling
 
@@ -259,9 +275,17 @@ Sample Evaluation Metrics:
 -	Recall: 0.8169
 -	F1 Score: 0.8171
 
-![Distribution of Sentiment Labels](Images/Distribution_of_Sentiment_Labels.png)
+<div align='center'>
 
-![Distribution of Sentiment Scores](Images/Distribution_of_Sentiment_Scores.png)
+<img src="Images/Distribution_of_Sentiment_Labels.png" alt="Distribution of Sentiment Labels">
+
+*Visualizing the returned distribution of setniment lables after applying a <abbr title='Actually, the same dataset `roberto` was trained on'>balanced dataset</abbr> through* `roberto`
+
+<img src="Images/Distribution_of_Sentiment_Scores.png" alt="Distribution of Sentiment Scores">
+
+*Illustrating the returned distribution of <abbr title="`roberto` doesn't like 'neutral' and 'negative' reviews the way it likes 'positive'">model confidence</abbr> after processing*
+
+</div>
 
 ## Scraping Reviews:
 
@@ -303,17 +327,17 @@ Dash was used to develop an interactive, web-based application to explore custom
 
 ## Results
 
-- **Sentiment Classification Accuracy**: The final model, roberto achieved an accuracy  over 82% in classifying sentiments as positive, negative, or neutral
-- **Actionable Feedback**: The OpenAI LangChain model, davidlingo, effectively summarizes available reviews and provides consumer-driven recommendations for improvements to operations, regardless of business scale.
-- **User Engagement and interaction**: The deployment of the sentiment analysis model into a Dash web application allowed users to interactively explore data. Feedback from user sessions can highlight the application's utility in providing immediate sentiment insights, which can be particualry useful for business owners and manager.
+* **Sentiment Classification Accuracy**: The final model, roberto achieved an accuracy  over 82% in classifying sentiments as positive, negative, or neutral
+* **Actionable Feedback**: The OpenAI LangChain model, davidlingo, effectively summarizes available reviews and provides consumer-driven recommendations for improvements to operations, regardless of business scale.
+* **User Engagement and interaction**: The deployment of the sentiment analysis model into a Dash web application allowed users to interactively explore data. Feedback from user sessions can highlight the application's utility in providing immediate sentiment insights, which can be particualry useful for business owners and manager.
 
 ---
 
 # Conclusion
 
--**Practical Benefits for Businesses**: The sentiment analysis tool provides businesses with a practical way to track and improve customer service by focusing on key factors that affect customer satisfaction. By incorporating sentiment analysis into their customer relationship management (CRM) systems, businesses can actively manage their reputations and strengthen customer loyalty.
+* **Practical Benefits for Businesses**: The sentiment analysis tool provides businesses with a practical way to track and improve customer service by focusing on key factors that affect customer satisfaction. By incorporating sentiment analysis into their customer relationship management (CRM) systems, businesses can actively manage their reputations and strengthen customer loyalty.
 
--**Improving Customer Experience**: The analysis delivers valuable insights that enable businesses to better customize their services or products to align with customer expectations.
+* **Improving Customer Experience**: The analysis delivers valuable insights that enable businesses to better customize their services or products to align with customer expectations.
 Placeholder
 
 ## Future Considerations
