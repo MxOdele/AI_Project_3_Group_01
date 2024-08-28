@@ -8,7 +8,7 @@
 *Powered by* `roberto` *and* `davidlingo`
 </div>
 
-## Project Team Members:
+### Project Team Members:
 * Ramona Ciobanu
 * Christian Leon
 * Leigh Nash
@@ -30,7 +30,7 @@
 
 # Project Details
 
-***Thesis:***
+## *Thesis:*
 
 This project aims to explore the relationship between various business attributes and review ratings. We hypothesize that certain business attributes (e.g., reviews, location, service quality, etc.) can be used to train AI to analyze and make suggestions to improve the businesses.
 
@@ -38,12 +38,8 @@ This project aims to explore the relationship between various business attribute
 
 # Data
 
-* List datasets (linked to sources)
-<a href="https://www.yelp.com/dataset">Visit the Yelp Dataset</a>
+To prepare our sentiment analysis model, we leveraged the __[Yelp Open Dataset](https://www.yelp.com/dataset)__ to harness existing reviews and ratings. These datasets cover aspects such as business information, customer check-ins, reviews, tips, and user data.
 
-### https://www.yelp.com/dataset ###
-
-The datasets cover aspects such as business information, customer check-ins, reviews, tips, and user data.
 ---
 
 # Project Management
