@@ -189,13 +189,13 @@ If, however, you are executing the notebook any subsequent time, comment out all
 
 ## Fetching Data:
 
-Use the provided scripts to download datasets from Google Drive. Alternatively, the data can be directly download from https://www.yelp.com/dataset and processed, dependent on the user's computing power and graphic card. Uncomment appropriate code if datasets are download directly. The 5 datasets from Yelp contain Business dataset, Checkin dataset, Reviews dataset, Tips dataset, and User dataset.
-
 ### User Defined Functions:
 *declared in this section*
 | **Function** | *Details* |
 | :--- | :--- |
 | `fetch_data(set)` | Downloads and reads datasets into DataFrames |
+
+Use the provided scripts to download datasets from Google Drive. Alternatively, the data can be directly download from https://www.yelp.com/dataset and processed, dependent on the user's computing power and graphic card. Uncomment appropriate code if datasets are download directly. The 5 datasets from Yelp contain Business dataset, Checkin dataset, Reviews dataset, Tips dataset, and User dataset.
 
 ## Performing EDA:
 
@@ -209,7 +209,30 @@ Analyze the data to uncover insights and prepare for further processing.
 
 The data was preprocessed by removing irrelevant columns, renaming variables, and merging relevant datasets for further analysis.  The final merged dataset prepared for machine learning included business id, stars, for rating purposes, review text for NLP tasks, stars average ratings, and other relevant buiness metadata.
 
+![A graph showing the distribution of star ratings](Images/Disribution_of_Star_Ratings.png)
+
+![Distribution of Star Ratings for Top 10 Businesses](Images/Disribution_of_Star_Ratings_Top_10_Business.png)
+
+![Distribution of Review Counts](Images/Distribution_of_Review_Counts.png)
+
+![Distribution of Top 20 Business Categories](Images/Distribution_of_Top_20_Business_Categories.png)
+
+![NA Percentage Plot](Images/NA_Percentage_Plot.png)
+
+![Is Open Feature Count](Images/is_open_Feature_Count.png)
+
 ## Modeling
+
+### User Defined Functions:
+*declared in this section*
+| Function | Details |
+| :--- | :--- |
+| `sample_stars()` | Selects subsets of a DataFrame based on user rating value thresholds |
+| `remove_accented_chars()` | Removes accented characters from text |
+| `clean_text()` | Removes web formatting from text |
+| `pre_process_reviews()` | Removes stop words from text |
+| `tokenizer_function()` | Tokenizes text |
+| `compute_metrics()` | Computes metrics to assist with evaluating model performance |
 
 This portion of the application is designed to perform sentiment analysis on business reviews. It classifies reviews into positive, neutral or negative and provides confidence scoress for each classification. While trained on Yelp! data, and developed for Google Reviews, the goal of the application is to be as univerally applicable to business reviews as possible - regardless of the source.
 
@@ -236,17 +259,10 @@ Sample Evaluation Metrics:
 -	Recall: 0.8169
 -	F1 Score: 0.8171
 
-### User Defined Functions:
-*declared in this section*
-| Function | Details |
-| :--- | :--- |
-| `sample_stars()` | Selects subsets of a DataFrame based on user rating value thresholds |
-| `remove_accented_chars()` | Removes accented characters from text |
-| `clean_text()` | Removes web formatting from text |
-| `pre_process_reviews()` | Removes stop words from text |
-| `tokenizer_function()` | Tokenizes text |
-| `compute_metrics()` | Computes metrics to assist with evaluating model performance |
-                       
+![Distribution of Sentiment Labels](Images/Distribution_of_Sentiment_Labels.png)
+
+![Distribution of Sentiment Scores](Images/Distribution_of_Sentiment_Scores.png)
+
 ## Scraping Reviews:
 
 Utilize Selenium to scrape reviews from specified Google Maps URLs ChromeDriver must be installed on your system to run the web scraping for business information, along with pandas, selenium, and beautifulsoup4.
@@ -259,90 +275,31 @@ Script functions:
 - **Data Handling**: Organizes and stores the extracted data in a structured format using pandas. 
 - **Automated Scrolling and Clicks**: Simulates user interction for loading more reviews.
 
-### Main Functions:
-| Function | Details |
-| :--- | :--- |
-|business_Overview(business_name, avg_rating, address1, lat, long, df)  |Creates a DataFrame with business details such as name, average rating, address, latitude, and longitude.|
-|get_review_summary(result_set) |Extracts review text and ratings from the parsed HTML content and returns a DataFrame with this data.|
-|Web Scraping with Selenium  |Automates the browser to navigate through a list of Google Maps URLs, extract business information, and load reviews.|
-|Data Aggregation   |Combines individual DataFrames from multiple businesses into a single DataFrame (spooder_df) for consolidated data analysis.|
-
----
-6.  Apply the Sentiment Analysis Model to the Web Scrapped Data
 The code applies sentiment analysis to Google Reviews data and processes the results to calculate the overall sentiment of a business and compile a list of its reviews. This processed data can then be used for further analysis, reporting, or input into other models, such as generating responses or insights using ChatGPT.
 
 - **Applies Sentiment Analysis**: Uses a sentiment analysis model to analyze the sentiment of each review in the scraped data.
 - **Calculates Overall Sentiment**: Aggregates the sentiment analysis results to determine the overall sentiment for specific businesses. This provides a general sentiment score or label that represents the business's customer feedback.
 - **Compiles Reviews**: Collects all reviews for a specific business into a list, which can be used for further analysis, reporting, or as input for other models, such as generating responses or insights.
 
-### Main Functions:
-| Function | Details |
-| :--- | :--- |
-|apply_roberto(spooder_df, 'review') |Applies sentiment analysis to reviews and returns a DataFrame with sentiment labels and scores.|
-|general_sentiment(roberto_df, 'bus_id', 'Dulce de Leche Bakery', 'sent_label', 'sent_score') |Calculates the overall sentiment for a specific business based on the sentiment labels and scores.|
-|reviews_list(roberto_df, 'bus_id', 'Dulce de Leche Bakery', 'bus_add', 'review') |Compiles all reviews for a specific business into a list for further use.|
-
----
-7.  Use Reviews from Selected Business to run ChatGPT Model
-This code uses OpenAI's GPT-3.5-turbo model to analyze customer reviews and generate a summary along with actionable recommendations for improving a business.
+Then a OpenAI's GPT-3.5-turbo model is used to analyze customer reviews and generate a summary along with actionable recommendations for improving a business.
 
 - **Load Environment and Initialize Model**: Sets up the OpenAI API and initializes the GPT-3.5-turbo model.
 - **Generate Prompt**: Creates a prompt template to instruct the model to summarize reviews and suggest improvements.
 - **Runs the Language Model Chain**: Uses the LLMChain model to generate a summary and recommendations based on the provided reviews.
 - **Extract and Display Results**: Extracts the summary and recommendations from the model's output and prints them to the console.
 
-### Main Functions:
-| Function | Details |
-| :--- | :--- |
-|ChatOpenAI  |Set the model name for our LLMs.|
-|PromptTemplate |Construct the prompt template.|
-|LLMChain  |Construct a chain using this template.|
-|chain.invoke() |Run the chain using the query as input and get the result.|
-
 ## SpooderApp™
-    
-While trained on Yelp! data, and developed for Google Reviews, the goal of the application is to be as univerally applicable to business reviews as possible - regardless of the source. The following functions were developed with their annotated purposes in mind:
 
-### Main Functions:
-| Function | Details |
-| :--- | :--- |
-|unique_locs_df() |Creates a DataFrame with all unique locations in a given dataset|
-|location_details()	|Generates a dictionary with geographic coordinates for all locations of a given business 
-Note: To be run on the DataFrame generated by unique_locs_df()|
-|build_map() |Constructs a Scattermapbox based on the locations from location_details()|
-|apply_davidlingo() |Generates the final summary of a business' reviews, or recommendations for improvement based off the reviews and overall sentiment 
-Note: To be used with the ouputs of reviews_list() and general_sentiment()|
+### User Defined Functions:
+*declared in this section*
+| **Function** | **Notes** |
+| :--- | :---|
+| `unique_locs_df()` | Creates a DataFrame with all unique locations in a given dataset |
+| `location_details()` | Generates a dictionary with geographic coordinates for all locations of a given business <br> *Note: To be run on the DataFrame generated by* `unique_locs_df()` |
+| `build_map()` | Constructs a Scattermapbox based on the locations from `location_details()` |
+| `apply_davidlingo()` | Generates the final summary of a business' reviews, or recommendations for improvement based off the reviews and overall sentiment <br> *Note: To be used with the ouputs of* `reviews_list()` *and* `general_sentiment()` |
 
-Each function outlined in more detail below requires a DataFrame with the following features:
-| Column | Details |
-| :--- | :--- |
-|bus_name_col |A text column with the name of a business|
-|bus_add |A text column with the street address of a business' location|
-|bus_lat |A float column with the latitude coordinate for a business' location|
-|bus_lon |A float column with the longitude coordinate for a business' location|
-|rev_col |A text column with available reviews|
-|sent_lbl |A text column with the generated sentiment classification 
-Note: Generated through apply_roberto()|
-|sent_scr |A text column with the generated sentiment classification 
-Note: Generated through apply_roberto()|
-
-## Visuals and Graphs
-![A graph showing the distribution of star ratings](Images/Disribution_of_Star_Ratings.png)
-
-![Distribution of Star Ratings for Top 10 Businesses](Images/Disribution_of_Star_Ratings_Top_10_Business.png)
-
-![Distribution of Review Counts](Images/Distribution_of_Review_Counts.png)
-
-![Distribution of Sentiment Labels](Images/Distribution_of_Sentiment_Labels.png)
-
-![Distribution of Sentiment Scores](Images/Distribution_of_Sentiment_Scores.png)
-
-![Distribution of Top 20 Business Categories](Images/Distribution_of_Top_20_Business_Categories.png)
-
-![NA Percentage Plot](Images/NA_Percentage_Plot.png)
-
-![Is Open Feature Count](Images/is_open_Feature_Count.png)
-
+Dash was used to develop an interactive, web-based application to explore customer feedback and business metrics. Applying `roberto` and `davidlingo` to the curated web scraped data, the HTML/CSS-like elements of Dash, Dash Core Components, and Dash Boostrap Components allowed us to develop an intuitive, effective interface for viewing the resulting sentiment analysis and feedback.
 
 ## Results
 
