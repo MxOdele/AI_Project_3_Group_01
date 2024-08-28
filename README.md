@@ -1,13 +1,11 @@
 # AI_Project_3_Group_01
-A data analysis class project 3 for Columbia University's AI bootcamp.
-
-## Title Placeholder
 
 <div align='center'>
 
-![SpooderApp Logo Inverted Color](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/SpooderApp_Logo_Inverted_Color.png?raw=true)
+![SpooderApp™ Logo, a stylized spider in shades of pink with the app name beside it in bold, white lettering](Images/SpooderApp_Logo_Inverted_Color.png)
 
-## Leveraging Reviews to Understand Consumer Sentiments ##
+#### *Leveraging Reviews to Understand Consumer Sentiments*
+*Powered by* `roberto` *and* `davidlingo`
 </div>
 
 ## Project Team Members:
@@ -20,7 +18,7 @@ A data analysis class project 3 for Columbia University's AI bootcamp.
 
 ---
 
-## Table of Contents
+# Table of Contents
 
 * [Project Details](#Project-Details)
 * [Data](#Data)
@@ -30,7 +28,7 @@ A data analysis class project 3 for Columbia University's AI bootcamp.
 
 ---
 
-## Project Details
+# Project Details
 
 ***Thesis:***
 
@@ -435,8 +433,6 @@ If, however, you are executing the notebook any subsequent time, comment out all
 ![Sentiment Analysis](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Sentiment%20Analysis%20img.png?raw=true)
 
 ![Is Open Feature Count](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/is_open_Feature_Count.png?raw=true)
-
-![Yelp & Google AI Generated Image](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/yelp%26google%20AI%20generated%20img.png?raw=true)
 
 
 ### Results
