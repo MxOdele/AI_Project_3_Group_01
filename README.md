@@ -4,9 +4,10 @@ A data analysis class project 3 for Columbia University's AI bootcamp.
 ## Title Placeholder
 
 <div align='center'>
-    <img src='' height='300' title='Placeholder' alt='Placeholder' />
+
+![SpooderApp Logo Inverted Color](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/SpooderApp_Logo_Inverted_Color.png?raw=true)
+
 ## Leveraging Reviews to Understand Consumer Sentiments ##
-*Footnote of image*[^1]
 </div>
 
 ## Project Team Members:
@@ -434,8 +435,6 @@ If, however, you are executing the notebook any subsequent time, comment out all
 ![Sentiment Analysis](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Sentiment%20Analysis%20img.png?raw=true)
 
 ![Is Open Feature Count](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/is_open_Feature_Count.png?raw=true)
-
-![SpooderApp Logo Inverted Color](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/SpooderApp_Logo_Inverted_Color.png?raw=true)
 
 ![Yelp & Google AI Generated Image](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/yelp%26google%20AI%20generated%20img.png?raw=true)
 
