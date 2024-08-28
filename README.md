@@ -36,17 +36,19 @@ This project aims to explore the relationship between various business attribute
 
 ---
 
-## Data
+# Data
 
 * List datasets (linked to sources)
 <a href="https://www.yelp.com/dataset">Visit the Yelp Dataset</a>
 
 ### https://www.yelp.com/dataset ###
----
-The datasets cover aspects such as business information, customer check-ins, reviews, tips, and user data.
-## Project Management
 
-### Overview
+The datasets cover aspects such as business information, customer check-ins, reviews, tips, and user data.
+---
+
+# Project Management
+
+## Overview
 
 | Phase | Details |
 | :--- | :--- |
@@ -60,11 +62,10 @@ The datasets cover aspects such as business information, customer check-ins, rev
 
 ### Instillations
 Installing necessary libraries 
-NOTE: Uncomment any libraries not currently present in your environment for
-####  initial execution of this notebook
-|  |  |
+*NOTE: Uncomment any libraries not currently present in your environment for initial execution of this notebook*
+
+|General utilities| Notes |
 | :--- | :--- |
- |General utilities| |
 |# %pip install pandas --quiet                  |# Data manipulation and analysis|
 |# %pip install numpy --quiet                   |# Numerical computations|
 |# %pip install scipy --quiet                   |# Scientific computing|
@@ -75,9 +76,8 @@ NOTE: Uncomment any libraries not currently present in your environment for
 |# %pip install zipfile --quiet                 |# Working with zip files|
 |# %pip install json --quiet                    |# JSON handling|
 
-|  |  |
+|Machine Learning & NLP| Notes |
 | :--- | :--- |
-|Machine Learning & NLP| |
 |# %pip install torch --quiet                   |# PyTorch for deep learning|
 |# %pip install transformers --quiet            |# HuggingFace Transformers|
 |# %pip install datasets --quiet                |# HuggingFace Datasets|
@@ -86,37 +86,33 @@ NOTE: Uncomment any libraries not currently present in your environment for
 |# %pip install accelerate --quiet              |# Accelerate training|
 |# %pip install evaluate --quiet                |# Metric evaluation|
 
-|  |  |
+|# Web scraping| Notes |
 | :--- | :--- |
-|# Web scraping| |
 |# %pip install selenium --quiet                |# Browser automation|
 |# %pip install webdriver-manager --quiet       |# Manage WebDriver binaries|
 |# %pip install beautifulsoup4 --quiet          |# Parsing HTML and XML|
 
-|  |  |
+|# Environment & API| Notes |
 | :--- | :--- |
-|# Environment & API| |
 |# %pip install python-dotenv --quiet           |# Load environment variables|
 |# %pip install langchain --quiet               |# OpenAI LangChain for AI models|
 
-|  |  |
+|# Dash (Web App Framework)| Notes |
 | :--- | :--- |
-|# Dash (Web App Framework)| |
 |# %pip install dash --quiet                      | # Dash core components|
 |# %pip install dash-bootstrap-components --quiet |# Dash Bootstrap components|
 
 |# Plotting & Visualization
 |# %pip install plotly --quiet                  |# Interactive graphing library|
 
-|  |  |
+| # Image Handling |  Notes |
 | :--- | :--- |
-|# Image Handling|
 |# %pip install opencv-python-headless --quiet  |# OpenCV for image processing|
 
 ### Imports and Dependencies
-|  |  |
+
+|# General Utilities| Notes |
 | :--- | :--- |
-|# General Utilities| |
 |import pandas as pd               |# Data manipulation and analysis|
 |import os                         |# Operating system interfaces|
 |import re                         |# Regular expressions|
@@ -131,24 +127,21 @@ NOTE: Uncomment any libraries not currently present in your environment for
 |import base64                     |# Encoding and decoding binary data|
 |from io import BytesIO            |# Handling binary data in memory|
 
-|  |  |
+|# Image Handling| Notes |
 | :--- | :--- |
-|# Image Handling| |
 |import cv2                       |# OpenCV for image processing|
 |from PIL import Image            | # Image processing via PIL (for handling image conversion)|
 
-|  |  |
+|# Plotting and Visualization| Notes |
 | :--- | :--- |
-|# Plotting and Visualization| |
 |import matplotlib.pyplot as plt   |# Plotting and visualization|
 |import matplotlib.ticker as mtick |# Setting ticks to larger numbers|
 |import seaborn as sns             |# Statistical data visualization|
 |import plotly.express as px       |# Simple interactive plots|
 |import plotly.graph_objects as go |# Detailed interactive plots|
 
-|  |  |
+|# Machine Learning & NLP| Notes |
 | :--- | :--- |
-|# Machine Learning & NLP| |
 |import torch                                          |# PyTorch for deep learning|
 |from sklearn.model_selection import train_test_split  |# Data splitting for training and testing|
 |from datasets import load_metric                      |# Compute metrics for NLP models|
@@ -157,25 +150,22 @@ NOTE: Uncomment any libraries not currently present in your environment for
 |from nltk.tokenize import word_tokenize               |# Tokenization of text|
 |import transformers                                   |# HuggingFace Transformers|
 
-|  |  |
+|# Pretrained Model and Tokenization| Notes |
 | :--- | :--- |
-|# Pretrained Model and Tokenization| |
 |from transformers import DistilBertForSequenceClassification, DistilBertTokenizer  |# DistilBERT model and tokenizer|
 |from transformers import AutoTokenizer, AutoModelForSequenceClassification         |# Auto-tokenizer and model for sequence classification|
 |from transformers import DataCollatorWithPadding                                   |# Dynamic padding for batched data|
 |from transformers import TrainingArguments, Trainer                                |# Training arguments and trainer|
 |from transformers import pipeline                                                  |# Inference pipeline|
 
-|  |  |
+|# Dataset Formatting| Notes |
 | :--- | :--- |
-|# Dataset Formatting| |
 |import accelerate                           |# Accelerate training|
 |from datasets import Dataset                |# Dataset handling|
 |from evaluate import load                   |# Metric evaluation|
 
-|  |  |
+|# Web Scraping| Notes |
 | :--- | :--- |
-|# Web Scraping| |
 |from selenium import webdriver                                          |# Browser automation|
 |from selenium.webdriver.chrome.service import Service as ChromeService  |# WebDriver service for Chrome|
 |from selenium.webdriver.support.ui import WebDriverWait                 |# WebDriver wait|
@@ -184,29 +174,25 @@ NOTE: Uncomment any libraries not currently present in your environment for
 |from webdriver_manager.chrome import ChromeDriverManager                |# Manage WebDriver binaries|
 |from bs4 import BeautifulSoup                                           |# Parsing HTML and XML|
 
-|  |  |
+|# Environment & API| Notes |
 | :--- | :--- |
-|# Environment & API| |
 |from dotenv import load_dotenv              |# Load environment variables|
 |from langchain_openai import ChatOpenAI     |# OpenAI API for LangChain|
 
-|  |  |
+|# Prompt Template and LLM Chain| Notes |
 | :--- | :--- |
-|# Prompt Template and LLM Chain| |
 |from langchain import PromptTemplate        |# Prompt template for LangChain|
 |from langchain.chains import LLMChain       |# LLM Chain for linking models|
 
-|  |  |
+|# Dash (Web App Framework)| Notes |
 | :--- | :--- |
-|# Dash (Web App Framework)| |
 |from dash import Dash, dcc, html, callback, callback_context  |# Dash core components and callbacks|
 |from dash.dependencies import Input, Output, State            |# Dash dependencies for callbacks|
 |from dash.exceptions import PreventUpdate                     |# Prevent updates in callbacks|
 |import dash_bootstrap_components as dbc                       |# Dash Bootstrap components|
 
-|  |  |
+|# Other| Notes |
 | :--- | :--- |
-|# Other| |
 |import math                      |# Mathematical functions|
 
 ### Methods
