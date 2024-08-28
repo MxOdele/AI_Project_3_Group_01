@@ -406,6 +406,6 @@ If more time allowed, future enhancements may consist of the following:
 
 # Citations
 
-Yelp Inc. (2021). Yelp Open Dataset. Retrieved from __[https://www.yelp.com/dataset](https://www.yelp.com/dataset)__
+Yelp Inc. (2021). *Yelp Open Dataset*. Retrieved from __[https://www.yelp.com/dataset](https://www.yelp.com/dataset)__.
 
-This project utilizes the Yelp Open Dataset. The findings presented here have been submitted to Yelp for review and approval in accordance with the dataset's terms of use.
+*Note: The findings and applications of this study are those of the authors and do not necessarily reflect the views or opinions of Yelp Inc.*
