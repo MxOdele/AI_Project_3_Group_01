@@ -403,20 +403,19 @@ If, however, you are executing the notebook any subsequent time, comment out all
 ## Visuals and Graphs
 ![A graph showing the distribution of star ratings](Images/Disribution_of_Star_Ratings.png)
 
-![Distribution of Star Ratings for Top 10 Businesses](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Disribution_of_Star_Ratings_Top_10_Business.png?raw=true)
+![Distribution of Star Ratings for Top 10 Businesses](Images/Disribution_of_Star_Ratings_Top_10_Business.png)
 
+![Distribution of Review Counts](Images/Distribution_of_Review_Counts.png)
 
-![Distribution of Review Counts](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Review_Counts.png?raw=true)
+![Distribution of Sentiment Labels](Images/Distribution_of_Sentiment_Labels.png)
 
-![Distribution of Sentiment Labels](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Sentiment_Labels.png?raw=true)
+![Distribution of Sentiment Scores](Images/Distribution_of_Sentiment_Scores.png)
 
-![Distribution of Sentiment Scores](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Sentiment_Scores.png?raw=true)
+![Distribution of Top 20 Business Categories](Images/Distribution_of_Top_20_Business_Categories.png)
 
-![Distribution of Top 20 Business Categories](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Top_20_Business_Categories.png?raw=true)
+![NA Percentage Plot](Images/NA_Percentage_Plot.png)
 
-![NA Percentage Plot](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/NA_Percentage_Plot.png?raw=true)
-
-![Is Open Feature Count](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/is_open_Feature_Count.png?raw=true)
+![Is Open Feature Count](Images/is_open_Feature_Count.png)
 
 
 ### Results
