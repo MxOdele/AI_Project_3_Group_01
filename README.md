@@ -418,7 +418,8 @@ If, however, you are executing the notebook any subsequent time, comment out all
 ## Visuals and Graphs
 ![A graph showing the distribution of star ratings](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Star_Ratings.png?raw=true)
 
-![Distribution of Star Ratings for Top 10 Businesses](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Star_Ratings_Top_10_Business.png?raw=true)
+![Distribution of Star Ratings for Top 10 Businesses](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Disribution_of_Star_Ratings_Top_10_Business.png?raw=true)
+
 
 ![Distribution of Review Counts](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Review_Counts.png?raw=true)
 
@@ -439,32 +440,6 @@ If, however, you are executing the notebook any subsequent time, comment out all
 ![Yelp & Google AI Generated Image](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/yelp%26google%20AI%20generated%20img.png?raw=true)
 
 
-
-![A graph showing something](Images/picture_name.png)
-![Distribution Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Disribution_of_Star_Ratings.png "Distribution of Star Ratings")
-
-![Distribution Top 10 Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Disribution_of_Star_Ratings_Top_10_Business.png "Distribution of Star Ratings Top 10")
-
-![Distribution Review Counts Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Distribution_of_Review_Counts.png "Distribution of Review Counts")
-
-
-![Distribution Sentiment Labels Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Distribution_of_Sentiment_Labels.png "Distribution of Sentiment Labels")
-
-![Distribution Sentiment Scores Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Distribution_of_Sentiment_Scores.png "Distribution of Sentiment Scores")
-
-![Distribution Top 20 Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Distribution_of_Top_20_Business_Categories.png "Distribution of Top 20 Business Categories")
-
-![Distribution NA Percentage Plot Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/NA_Percentage_Plot.png "NA Percentage Plot")
-
-![Distribution Sentiment Analysis Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Sentiment_Analysis_img.png "Sentiment Analysis")
-
-![is_open Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/is_open_Feature_Count.png "is open")
-
-![SpooderApp Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/SpooderApp_Logo_Inverted_Color.png "SpooderApp")
-
-![Yelp&Google Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/yelp&google_AI_generated_img.png "Yelp&Google")
-
-https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images
 ### Results
 - **Sentiment Classification Accuracy**: The final model, roberto achieved an accuracy  over 82% in classifying sentiments as positive, negative, or neutral
 - **Actionable Feedback**: The OpenAI LangChain model, davidlingo, effectively summarizes available reviews and provides consumer-driven recommendations for improvements to operations, regardless of business scale.
