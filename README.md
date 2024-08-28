@@ -406,7 +406,6 @@ If more time allowed, future enhancements may consist of the following:
 
 # Citations
 
-Sources
-•	The data and analysis code in this project are licensed under the MIT License.
+Yelp Inc. (2021). Yelp Open Dataset. Retrieved from __[https://www.yelp.com/dataset](https://www.yelp.com/dataset)__
 
-•   Yelp Dataset [Yelp Open Dataset](https://www.yelp.com/dataset)
+This project utilizes the Yelp Open Dataset. The findings presented here have been submitted to Yelp for review and approval in accordance with the dataset's terms of use.
