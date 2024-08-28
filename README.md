@@ -173,6 +173,15 @@ This project includes multiple components such as data fetching, exploratory dat
 - **se Reviews from Selected Business to run ChatGPT Model**
 - **Spooder Ap**
 
+### Instructions for Running the Code:
+1.  Clone repository to a local directory.
+2.  Ensure necessary API Keys are present in your local `.env`.
+3.  Uncomment neccesary `pip install`s as needed from `[notebook]`.
+4.  If executing for the first time, uncomment any `gdown` fetch cells and comment out their corresponding `.csv` read ins.
+If, however, you are executing the notebook any subsequent time, comment out all instances of `gdown` fetch requests, and instead utilize their corresponding `.csv` read ins.
+5.  `Run All Cells` to execute the code in every cell of the notebook in sequence. Alternatively, each cell may be `Run` on its own, though it is still recommended to run them in order.  *Note: This will launch the application* `SpooderApp™` *in your default browser.*
+6.  Consult onscreen guide in `SpooderApp™` interface for use.
+
 ---
 
 # Execution
@@ -182,7 +191,11 @@ This project includes multiple components such as data fetching, exploratory dat
 
 Use the provided scripts to download datasets from Google Drive. Alternatively, the data can be directly download from https://www.yelp.com/dataset and processed, dependent on the user's computing power and graphic card. Uncomment appropriate code if datasets are download directly. The 5 datasets from Yelp contain Business dataset, Checkin dataset, Reviews dataset, Tips dataset, and User dataset.
 
----
+### User Defined Functions:
+*declared in this section*
+| **Function** | *Details* |
+| :--- | :--- |
+| `fetch_data(set)` | Downloads and reads datasets into DataFrames |
 
 ## Performing EDA:
 
@@ -196,23 +209,13 @@ Analyze the data to uncover insights and prepare for further processing.
 
 The data was preprocessed by removing irrelevant columns, renaming variables, and merging relevant datasets for further analysis.  The final merged dataset prepared for machine learning included business id, stars, for rating purposes, review text for NLP tasks, stars average ratings, and other relevant buiness metadata.
 
-### Main Functions:
-| **Function** | *Details* |
-| :--- | :--- |
-| fetch_data(set) |Downloads and reads datasets into DataFrames.|
-|pd.read_csv() |Reads CSV files into DataFrames.|
-|DataFrame.head() |Displays the first few rows of the DataFrame.|
-|DataFrame.info() |Provides a summary of the DataFrame, including data types and non-null counts.|
-|DataFrame.isna().sum() |Counts missing values in each column.|
-|DataFrame.drop() |Drops irrelevant or low-value columns.|
-|DataFrame.rename() |Renames columns for standardization.|
-|DataFrame.merge() |Merges multiple DataFrames to create a consolidated dataset.|
-|seaborn.barplot() |Visualizes missing data percentages.|
-|DataFrame.replace() |Combines and reduces the number of categories for target variables.|
-
----
-
 ## Modeling
+
+This portion of the application is designed to perform sentiment analysis on business reviews. It classifies reviews into positive, neutral or negative and provides confidence scoress for each classification. While trained on Yelp! data, and developed for Google Reviews, the goal of the application is to be as univerally applicable to business reviews as possible - regardless of the source.
+
+- **Sentiment Analysis**: Using a pre-trained model nick named "reobert" to analyze sentiment of reviews and assigns a sentiment lable of positive, neutral, or negative.
+- **Data Aggregation**: Functions designed to retrieve and process business names and reviews from a dataset.
+- **Sentiment Summary**: Classify sentiment for a business based on all availabe reviews.
 
 Sentiment Analysis Using BERT-based Models:
 
@@ -233,58 +236,20 @@ Sample Evaluation Metrics:
 -	Recall: 0.8169
 -	F1 Score: 0.8171
 
-### Main Functions:
+### User Defined Functions:
+*declared in this section*
 | Function | Details |
 | :--- | :--- |
-|remove_accented_chars(text)| Removes accented characters from text.|
-|clean_text(text)| Cleans text by removing URLs, mentions, hashtags, and extra spaces.|
-|pre_process_reviews(reviews) | Preprocesses review text by cleaning and removing stop words.|
-|sample_stars(df, val)| Balances dataset by sampling based on star ratings.|
-|tokenizer_function(review)| Tokenizes text data for model input.|
-|DistilBertForSequenceClassification.from_pretrained()| Loads a pre-trained BERT model for sequence classification.|
-|DistilBertTokenizer.from_pretrained()| Loads the tokenizer associated with the BERT model.|
-|Dataset.from_dict()| Converts text data into HuggingFace dataset format.|
-|TrainingArguments()| Configures training parameters for the model.|
-|Trainer()| Initializes the model training setup with data and evaluation metrics.|
-|trainer.train()| Fine-tunes the BERT model on the training dataset.|
-|compute_metrics(pred)| Computes evaluation metrics (accuracy, precision, recall, F1-score).|
-|pipeline('sentiment-analysis')| Creates a sentiment analysis pipeline using the fine-tuned model.|
-|apply_roberto(df, review_col)| Applies sentiment analysis to a DataFrame of reviews.|
-|model.save_pretrained() and tokenizer.save_pretrained()| Saves the trained model and tokenizer.|
-|gdown.download() and zipfile.ZipFile()| Downloads and extracts the pre-trained model from Google Drive.|
-
----
-
-4. Universal Business Review Sentiment Analysis
-This portion of the application is designed to perform sentiment analysis on business reviews. It classifies reviews into positive, neutral or negative and provides confidence scoress for each classification. While trained on Yelp! data, and developed for Google Reviews, the goal of the application is to be as univerally applicable to business reviews as possible - regardless of the source. 
-- **Sentiment Analysis**: Using a pre-trained model nick named "reobert" to analyze sentiment of reviews and assigns a sentiment lable of positive, neutral, or negative.
-- **Data Aggregation**: Functions designed to retrieve and process business names and reviews from a dataset.
-- **Sentiment Summary**: Classify sentiment for a business based on all availabe reviews.
-
-### Main Functions:
-| Function | Details |
-| :--- | :--- |
-apply_roberto() | Generates sentiment analysis for reviews in a given dataset, and a confidence in that sentiment|
-business_names_list() | Generates a list of unique business names from a given dataset|
-reviews_list() | Generates a list of all reviews submitted to a business for all its locations|
-general_sentiment()	| Classifies the general sentiment for a business' reviews and provides a mean confidence in that sentiment 
-Note: To be run after a DataFrame has been passed through apply_roberto()|
-
-Function outlined in more detail below require a DataFrame with the following features:
-Feature	Notes
-| Column | Details |
-| :--- | :--- |
-|bus_name_col |A text column with the name of a business|
-|bus_add |A text column with the street address of a business' location|
-|rev_col |A text column with available reviews|
-|sent_lbl|A text column with the generated sentiment classification 
-                       Note: Generated through apply_roberto()|
-|sent_scr|A text column with the generated sentiment classification
-                       Note: Generated through apply_roberto()|
+| `sample_stars()` | Selects subsets of a DataFrame based on user rating value thresholds |
+| `remove_accented_chars()` | Removes accented characters from text |
+| `clean_text()` | Removes web formatting from text |
+| `pre_process_reviews()` | Removes stop words from text |
+| `tokenizer_function()` | Tokenizes text |
+| `compute_metrics()` | Computes metrics to assist with evaluating model performance |
                        
----
-5.  Scraping Reviews: Utilize Selenium to scrape reviews from specified Google Maps URLs
-ChromeDriver must be installed on your system to run the web scraping for business information, along with pandas, selenium, and beautifulsoup4.
+## Scraping Reviews:
+
+Utilize Selenium to scrape reviews from specified Google Maps URLs ChromeDriver must be installed on your system to run the web scraping for business information, along with pandas, selenium, and beautifulsoup4.
 
 This is a Python-based web scraper designed to extract business details and customer reviews from Google Maps using Selenium and BeautifulSoup. The scraper navigates through multiple Google Maps URLs, collects business information such as names, ratings, addresses, and retrieves customer reviews. The extracted data is then organized into a structured format for further analysis.
 
@@ -334,8 +299,7 @@ This code uses OpenAI's GPT-3.5-turbo model to analyze customer reviews and gene
 |LLMChain  |Construct a chain using this template.|
 |chain.invoke() |Run the chain using the query as input and get the result.|
 
----
-8.  Spooder Ap
+## SpooderApp™
     
 While trained on Yelp! data, and developed for Google Reviews, the goal of the application is to be as univerally applicable to business reviews as possible - regardless of the source. The following functions were developed with their annotated purposes in mind:
 
@@ -362,17 +326,6 @@ Note: Generated through apply_roberto()|
 |sent_scr |A text column with the generated sentiment classification 
 Note: Generated through apply_roberto()|
 
----
-Instructions for Running the Code:
-1.  Clone repository to a local directory.
-2.  Ensure necessary API Keys are present in your local `.env`.
-3.  Uncomment neccesary `pip install`s as needed from `[notebook]`.
-4.  If executing for the first time, uncomment any `gdown` fetch cells and comment out their corresponding `.csv` read ins.
-If, however, you are executing the notebook any subsequent time, comment out all instances of `gdown` fetch requests, and instead utilize their corresponding `.csv` read ins.
-5.  `Run All Cells` to execute the code in every cell of the notebook in sequence. Alternatively, each cell may be `Run` on its own, though it is still recommended to run them in order.  *Note: This will launch the application* `SpooderApp™` *in your default browser.*
-6.  Consult onscreen guide in `SpooderApp™` interface for use.
-
-
 ## Visuals and Graphs
 ![A graph showing the distribution of star ratings](Images/Disribution_of_Star_Ratings.png)
 
@@ -391,20 +344,24 @@ If, however, you are executing the notebook any subsequent time, comment out all
 ![Is Open Feature Count](Images/is_open_Feature_Count.png)
 
 
-### Results
+## Results
+
 - **Sentiment Classification Accuracy**: The final model, roberto achieved an accuracy  over 82% in classifying sentiments as positive, negative, or neutral
 - **Actionable Feedback**: The OpenAI LangChain model, davidlingo, effectively summarizes available reviews and provides consumer-driven recommendations for improvements to operations, regardless of business scale.
 - **User Engagement and interaction**: The deployment of the sentiment analysis model into a Dash web application allowed users to interactively explore data. Feedback from user sessions can highlight the application's utility in providing immediate sentiment insights, which can be particualry useful for business owners and manager.
 
-### Conclusion
+---
+
+# Conclusion
+
 -**Practical Benefits for Businesses**: The sentiment analysis tool provides businesses with a practical way to track and improve customer service by focusing on key factors that affect customer satisfaction. By incorporating sentiment analysis into their customer relationship management (CRM) systems, businesses can actively manage their reputations and strengthen customer loyalty.
 
 -**Improving Customer Experience**: The analysis delivers valuable insights that enable businesses to better customize their services or products to align with customer expectations.
 Placeholder
 
-### Future Considerations
-If more time allowed, future enhancements may consist of the following:
+## Future Considerations
 
+If more time allowed, future enhancements may consist of the following:
 - We can consider expanding the model to handle reviews in multiple languages (M-Bert), reflecting Yelp's diverse global user base, which would make our application more versatile and accessible.
 - We can also integrate predictive models to forecast future review trends or business performance based on current sentiment scores and other variables like location or time of year. 
 - Developing customizable dashboards where businesses can track their reviews and sentiment trends over time. Improving the interactivity of the web application with features like voice commands or chatbots that could guide users through the data exploration process.
@@ -413,10 +370,9 @@ If more time allowed, future enhancements may consist of the following:
 - Train roberto on a larger dataset than the six thousand (6,000) reviews provided.
 - Final application to be deployed to a web server, making it accessible for real-world use.
 
-
 ---
 
-## Citations
+# Citations
 
 Sources
 •	The data and analysis code in this project are licensed under the MIT License.
