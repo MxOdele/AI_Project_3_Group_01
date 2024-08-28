@@ -415,8 +415,32 @@ If, however, you are executing the notebook any subsequent time, comment out all
 6.  Consult onscreen guide in `SpooderApp™` interface for use.
 
 ## Findings
+## Visuals and Graphs
+![A graph showing the distribution of star ratings](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Star_Ratings.png?raw=true)
+
+![Distribution of Star Ratings for Top 10 Businesses](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Star_Ratings_Top_10_Business.png?raw=true)
+
+![Distribution of Review Counts](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Review_Counts.png?raw=true)
+
+![Distribution of Sentiment Labels](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Sentiment_Labels.png?raw=true)
+
+![Distribution of Sentiment Scores](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Sentiment_Scores.png?raw=true)
+
+![Distribution of Top 20 Business Categories](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Distribution_of_Top_20_Business_Categories.png?raw=true)
+
+![NA Percentage Plot](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/NA_Percentage_Plot.png?raw=true)
+
+![Sentiment Analysis](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/Sentiment%20Analysis%20img.png?raw=true)
+
+![Is Open Feature Count](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/is_open_Feature_Count.png?raw=true)
+
+![SpooderApp Logo Inverted Color](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/SpooderApp_Logo_Inverted_Color.png?raw=true)
+
+![Yelp & Google AI Generated Image](https://github.com/MxOdele/AI_Project_3_Group_01/blob/main/Images/yelp%26google%20AI%20generated%20img.png?raw=true)
 
 
+
+![A graph showing something](Images/picture_name.png)
 ![Distribution Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Disribution_of_Star_Ratings.png "Distribution of Star Ratings")
 
 ![Distribution Top 10 Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/Disribution_of_Star_Ratings_Top_10_Business.png "Distribution of Star Ratings Top 10")
@@ -440,7 +464,7 @@ If, however, you are executing the notebook any subsequent time, comment out all
 
 ![Yelp&Google Image](https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images/yelp&google_AI_generated_img.png "Yelp&Google")
 
-
+https://github.com/MxOdele/AI_Project_3_Group_01/tree/main/Images
 ### Results
 - **Sentiment Classification Accuracy**: The final model, roberto achieved an accuracy  over 82% in classifying sentiments as positive, negative, or neutral
 - **Actionable Feedback**: The OpenAI LangChain model, davidlingo, effectively summarizes available reviews and provides consumer-driven recommendations for improvements to operations, regardless of business scale.
@@ -453,11 +477,16 @@ If, however, you are executing the notebook any subsequent time, comment out all
 Placeholder
 
 ### Future Considerations
-If given more time to develop its features further, **SpooderApp™** was envisioned to meet the following milestones;
-- Allow for ad hoc searches of businesses and real-time web scraping
-- Retrieve a complete list of available reviews in lieu of the sampled up-to-fifty (=< 50)
-- Train `roberto` on a larger dataset than the six thousand (6,000) reviews provided
-- Brand and logo development (because a cute little spooder logo would be too adorable for words)
+If more time allowed, future enhancements may consist of the following:
+
+- We can consider expanding the model to handle reviews in multiple languages (M-Bert), reflecting Yelp's diverse global user base, which would make our application more versatile and accessible.
+- We can also integrate predictive models to forecast future review trends or business performance based on current sentiment scores and other variables like location or time of year. 
+- Developing customizable dashboards where businesses can track their reviews and sentiment trends over time. Improving the interactivity of the web application with features like voice commands or chatbots that could guide users through the data exploration process.
+- Allow for ad hoc searches of businesses and real-time web scraping.
+- Retrieve a complete list of available reviews in lieu of the sampled up-to-fifty.
+- Train roberto on a larger dataset than the six thousand (6,000) reviews provided.
+- Final application to be deployed to a web server, making it accessible for real-world use.
+
 
 ---
 
