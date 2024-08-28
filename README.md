@@ -8,13 +8,16 @@
 *Powered by* `roberto` *and* `davidlingo`
 </div>
 
-### Project Team Members:
-* Ramona Ciobanu
-* Christian Leon
-* Leigh Nash
-* Angelica Padilla
-* Odele Pax
-* Vanessa Wright
+### Meet the team:
+
+| Member | Role |
+| :--- | :--- |
+| Ramona Ciobanu | Presentaiton Lead |
+| Christian Leon | EDA Lead, Transformer Lead |
+| Leigh Nash | `README` Lead |
+| Angelica Padilla | Web Scraper Lead, LangChain Lead |
+| Odele Pax | Project Manager |
+| Vanessa Wright | Git Lead, Support for all, Absolute Hero |
 
 ---
 
@@ -56,7 +59,7 @@ To prepare our sentiment analysis model, we leveraged the __[Yelp Open Dataset](
 | Modeling | Developed and fine-tuned machine learning models, primarily using BERT-based models, to classify and analyze sentiments. |
 | Spooder App | Built a web application using Dash to provide an interactive interface for analyzing business reviews. |
 
-## Instillations
+## Installations
 Installing necessary libraries 
 *NOTE: Uncomment any libraries not currently present in your environment for initial execution of this notebook*
 
@@ -251,9 +254,9 @@ The data was preprocessed by removing irrelevant columns, renaming variables, an
 | `tokenizer_function()` | Tokenizes text |
 | `compute_metrics()` | Computes metrics to assist with evaluating model performance |
 
-This portion of the application is designed to perform sentiment analysis on business reviews. It classifies reviews into positive, neutral or negative and provides confidence scoress for each classification. While trained on Yelp! data, and developed for Google Reviews, the goal of the application is to be as univerally applicable to business reviews as possible - regardless of the source.
+This portion of the application is designed to perform sentiment analysis on business reviews. It classifies reviews into positive, neutral or negative and provides confidence scoress for each classification. While trained on Yelp! data, and developed for Google Reviews, the goal of the application is to be as univerally applicable to business reviews as possible - regardless of the source. Though our initial attempt to train our model yielded an accruacy of only around forty-five percemt (~40%), through hypertuning we achieved an accuracy over eighty percent (80%).
 
-- **Sentiment Analysis**: Using a pre-trained model nick named "reobert" to analyze sentiment of reviews and assigns a sentiment lable of positive, neutral, or negative.
+- **Sentiment Analysis**: Using a fine-tuned, pre-trained model nick named `roberto` to analyze sentiment of reviews and assigns a sentiment lable of positive, neutral, or negative.
 - **Data Aggregation**: Functions designed to retrieve and process business names and reviews from a dataset.
 - **Sentiment Summary**: Classify sentiment for a business based on all availabe reviews.
 
@@ -263,7 +266,7 @@ Sentiment Analysis Using BERT-based Models:
  - **Test Preprocessing**: Cleaning and normalizing text data for modal processing.
  - **Model Training**: Pre-trained DistilBERT model for sentiment classification.
  - **Evaluation**: Use metrics accuracy, precision, recall, and F1 score to evaluate model performance.
- - **Model Deployment**: Use trained model on test dataset to predict sentiments.
+ - **Model Deployment**: Use trained model, `roberto`, on test dataset to predict sentiments.
 
 Star ratings were encoded into 3 categories using label encoding. 
 -	0 for negative (1, 2 stars)
@@ -292,6 +295,8 @@ Sample Evaluation Metrics:
 
 ### User Defined Functions:
 *declared in this section*
+| Function | Details |
+| :--- | :--- |
 | `apply_roberto()` | Generates sentiment analysis for reviews in a given dataset, and a confidence in that sentiment |
 | `business_names_list()` | Generates a list of unique business names from a given dataset |
 | `reviews_list()` | Generates a list of all reviews submitted to a business for all its locations |
@@ -311,7 +316,7 @@ Script functions:
 - **Data Handling**: Organizes and stores the extracted data in a structured format using pandas. 
 - **Automated Scrolling and Clicks**: Simulates user interction for loading more reviews.
 
-The code applies sentiment analysis to Google Reviews data and processes the results to calculate the overall sentiment of a business and compile a list of its reviews. This processed data can then be used for further analysis, reporting, or input into other models, such as generating responses or insights using ChatGPT.
+The code applies sentiment analysis to Google Reviews data and processes the results to calculate the overall sentiment of a business and compile a list of its reviews. This processed data can then be used for further analysis, reporting, or input into other models, such as generating responses or insights using an OpenAI LangChain we nicknamed `davidlingo`.
 
 - **Applies Sentiment Analysis**: Uses a sentiment analysis model to analyze the sentiment of each review in the scraped data.
 - **Calculates Overall Sentiment**: Aggregates the sentiment analysis results to determine the overall sentiment for specific businesses. This provides a general sentiment score or label that represents the business's customer feedback.
@@ -405,4 +410,3 @@ Sources
 •	The data and analysis code in this project are licensed under the MIT License.
 
 •   Yelp Dataset [Yelp Open Dataset](https://www.yelp.com/dataset)
-[^1]: Image source
