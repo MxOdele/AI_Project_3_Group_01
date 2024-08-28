@@ -96,6 +96,7 @@ Installing necessary libraries
 
 ## Imports and Dependencies
 | **General Utilities** | *Notes* |
+| :--- | :--- |
 |import pandas as pd               |# Data manipulation and analysis|
 |import os                         |# Operating system interfaces|
 |import re                         |# Regular expressions|
