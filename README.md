@@ -36,7 +36,7 @@ This project aims to explore the relationship between various business attribute
 
 ---
 
-# Data
+## Data
 
 To prepare our sentiment analysis model, we leveraged the __[Yelp Open Dataset](https://www.yelp.com/dataset)__ to harness existing reviews and ratings. These datasets cover aspects such as business information, customer check-ins, reviews, tips, and user data.
 
@@ -48,7 +48,7 @@ To prepare our sentiment analysis model, we leveraged the __[Yelp Open Dataset](
 
 | Phase | Details |
 | :--- | :--- |
-| Data Sourcing | Data was sourced from the [Yelp Dataset](https://www.yelp.com/dataset)   |
+| Data Sourcing | Data was sourced from the [Yelp Open Dataset](#Citations)   |
 | Version Control | Git strategy for collaborative work across team members  |
 | EDA | Initial exploration of datasets to understand data structure and identify key variables   
 | Merging Datasets | The reviews and business datasets were merged based on the `business_id`. The tips dataset was also considered but was ultimately not merged due to data loss during merging. |
@@ -56,11 +56,11 @@ To prepare our sentiment analysis model, we leveraged the __[Yelp Open Dataset](
 | Modeling | Developed and fine-tuned machine learning models, primarily using BERT-based models, to classify and analyze sentiments. |
 | Spooder App | Built a web application using Dash to provide an interactive interface for analyzing business reviews. |
 
-### Instillations
+## Instillations
 Installing necessary libraries 
 *NOTE: Uncomment any libraries not currently present in your environment for initial execution of this notebook*
 
-|General utilities| Notes |
+| **General Utilities** | *Notes* |
 | :--- | :--- |
 |# %pip install pandas --quiet                  |# Data manipulation and analysis|
 |# %pip install numpy --quiet                   |# Numerical computations|
@@ -71,9 +71,7 @@ Installing necessary libraries
 |# %pip install gdown --quiet                   |# Downloading files from Google Drive|
 |# %pip install zipfile --quiet                 |# Working with zip files|
 |# %pip install json --quiet                    |# JSON handling|
-
-|Machine Learning & NLP| Notes |
-| :--- | :--- |
+| **Machine Learning & NLP** | *Notes* |
 |# %pip install torch --quiet                   |# PyTorch for deep learning|
 |# %pip install transformers --quiet            |# HuggingFace Transformers|
 |# %pip install datasets --quiet                |# HuggingFace Datasets|
@@ -81,34 +79,23 @@ Installing necessary libraries
 |# %pip install nltk --quiet                    |# Natural Language Toolkit for text processing|
 |# %pip install accelerate --quiet              |# Accelerate training|
 |# %pip install evaluate --quiet                |# Metric evaluation|
-
-|# Web scraping| Notes |
-| :--- | :--- |
+| **Web Scraping** | *Notes* |
 |# %pip install selenium --quiet                |# Browser automation|
 |# %pip install webdriver-manager --quiet       |# Manage WebDriver binaries|
 |# %pip install beautifulsoup4 --quiet          |# Parsing HTML and XML|
-
-|# Environment & API| Notes |
-| :--- | :--- |
+| **Environment & API** | *Notes* |
 |# %pip install python-dotenv --quiet           |# Load environment variables|
 |# %pip install langchain --quiet               |# OpenAI LangChain for AI models|
-
-|# Dash (Web App Framework)| Notes |
-| :--- | :--- |
+| **Dash (Web App Framework)** | *Notes* |
 |# %pip install dash --quiet                      | # Dash core components|
 |# %pip install dash-bootstrap-components --quiet |# Dash Bootstrap components|
-
-|# Plotting & Visualization
+| **Plotting & Visualization** | *Notes* |
 |# %pip install plotly --quiet                  |# Interactive graphing library|
-
-| # Image Handling |  Notes |
-| :--- | :--- |
+| **Image Handling** | *Notes* |
 |# %pip install opencv-python-headless --quiet  |# OpenCV for image processing|
 
-### Imports and Dependencies
-
-|# General Utilities| Notes |
-| :--- | :--- |
+## Imports and Dependencies
+| **General Utilities** | *Notes* |
 |import pandas as pd               |# Data manipulation and analysis|
 |import os                         |# Operating system interfaces|
 |import re                         |# Regular expressions|
@@ -122,22 +109,16 @@ Installing necessary libraries
 |from tqdm import tqdm             |# Progress bar for loops|
 |import base64                     |# Encoding and decoding binary data|
 |from io import BytesIO            |# Handling binary data in memory|
-
-|# Image Handling| Notes |
-| :--- | :--- |
+| **Image Handling** | *Notes* |
 |import cv2                       |# OpenCV for image processing|
 |from PIL import Image            | # Image processing via PIL (for handling image conversion)|
-
-|# Plotting and Visualization| Notes |
-| :--- | :--- |
+| **Plotting and Visualization** | *Notes* |
 |import matplotlib.pyplot as plt   |# Plotting and visualization|
 |import matplotlib.ticker as mtick |# Setting ticks to larger numbers|
 |import seaborn as sns             |# Statistical data visualization|
 |import plotly.express as px       |# Simple interactive plots|
 |import plotly.graph_objects as go |# Detailed interactive plots|
-
-|# Machine Learning & NLP| Notes |
-| :--- | :--- |
+| **Machine Learning & NLP** | *Notes* |
 |import torch                                          |# PyTorch for deep learning|
 |from sklearn.model_selection import train_test_split  |# Data splitting for training and testing|
 |from datasets import load_metric                      |# Compute metrics for NLP models|
@@ -145,23 +126,17 @@ Installing necessary libraries
 |from nltk.corpus import stopwords                     |# Stop words for text preprocessing|
 |from nltk.tokenize import word_tokenize               |# Tokenization of text|
 |import transformers                                   |# HuggingFace Transformers|
-
-|# Pretrained Model and Tokenization| Notes |
-| :--- | :--- |
+| **Pretrained Model and Tokenization** | *Notes* |
 |from transformers import DistilBertForSequenceClassification, DistilBertTokenizer  |# DistilBERT model and tokenizer|
 |from transformers import AutoTokenizer, AutoModelForSequenceClassification         |# Auto-tokenizer and model for sequence classification|
 |from transformers import DataCollatorWithPadding                                   |# Dynamic padding for batched data|
 |from transformers import TrainingArguments, Trainer                                |# Training arguments and trainer|
 |from transformers import pipeline                                                  |# Inference pipeline|
-
-|# Dataset Formatting| Notes |
-| :--- | :--- |
+| **Dataset Formatting** | *Notes* |
 |import accelerate                           |# Accelerate training|
 |from datasets import Dataset                |# Dataset handling|
 |from evaluate import load                   |# Metric evaluation|
-
-|# Web Scraping| Notes |
-| :--- | :--- |
+| **Web Scraping** | *Notes* |
 |from selenium import webdriver                                          |# Browser automation|
 |from selenium.webdriver.chrome.service import Service as ChromeService  |# WebDriver service for Chrome|
 |from selenium.webdriver.support.ui import WebDriverWait                 |# WebDriver wait|
@@ -169,34 +144,24 @@ Installing necessary libraries
 |from selenium.webdriver.support import expected_conditions as EC        |# Expected conditions for WebDriver waits|
 |from webdriver_manager.chrome import ChromeDriverManager                |# Manage WebDriver binaries|
 |from bs4 import BeautifulSoup                                           |# Parsing HTML and XML|
-
-|# Environment & API| Notes |
-| :--- | :--- |
+| **Environment & API** | *Notes* |
 |from dotenv import load_dotenv              |# Load environment variables|
 |from langchain_openai import ChatOpenAI     |# OpenAI API for LangChain|
-
-|# Prompt Template and LLM Chain| Notes |
-| :--- | :--- |
+| **Prompt Template and LLM Chain** | *Notes* |
 |from langchain import PromptTemplate        |# Prompt template for LangChain|
 |from langchain.chains import LLMChain       |# LLM Chain for linking models|
-
-|# Dash (Web App Framework)| Notes |
-| :--- | :--- |
+| **Dash (Web App Framework)** | *Notes* |
 |from dash import Dash, dcc, html, callback, callback_context  |# Dash core components and callbacks|
 |from dash.dependencies import Input, Output, State            |# Dash dependencies for callbacks|
 |from dash.exceptions import PreventUpdate                     |# Prevent updates in callbacks|
 |import dash_bootstrap_components as dbc                       |# Dash Bootstrap components|
-
-|# Other| Notes |
-| :--- | :--- |
+| **Other** | *Notes* |
 |import math                      |# Mathematical functions|
 
 ### Methods
-Data Management with gdown
-Due to the large size of the training files required for our models, alternative storage solutions to Git were necessary as a result of storage limits. We selected gdown for its integration with Google Drive. 
-The notebook json_conversion_for_gdown serves to convert our source files and test functions for retrieval from Google Drive. After successful tests, the relevant code was integrated into our main working notebooks. This notebook is retained in Resources/ for reference.
+Data Management with gdown due to the large size of the training files required for our models, alternative storage solutions to Git were necessary as a result of storage limits. We selected `gdown` for its integration with Google Drive.
 
-Original training data sources can be found at https://www.yelp.com/dataset
+The notebook `json_conversion_for_gdown.ipynb` serves to convert our source files and test functions for retrieval from Google Drive. After successful tests, the relevant code was integrated into our main working notebooks. This notebook is retained in Resources/ for reference.
 
 This project includes multiple components such as data fetching, exploratory data analysis (EDA), data integration, BERT-based Models, web scraping, LangChain, and OpenAI:
 - **Data Fetching: Automated scripts to download data from Google Drive.**
@@ -209,8 +174,9 @@ This project includes multiple components such as data fetching, exploratory dat
 - **Spooder Ap**
 
 ---
-#### Steps
-Detailed Steps
+# Execution
+*Detailed steps of the notebook's execution*
+
 1.	Fetching Data: Use the provided scripts to download datasets from Google Drive. Alternatively, the data can be directly download from https://www.yelp.com/dataset and processed, dependent on the user's computing power and graphic card. Uncomment appropriate code if datasets are download directly. The 5 datasets from Yelp contain Business dataset, Checkin dataset, Reviews dataset, Tips dataset, and User dataset.
    
 def fetch_data(set):  # Function to access datasets through `gdown`
@@ -439,7 +405,7 @@ If more time allowed, future enhancements may consist of the following:
 
 ---
 
-## Citations and Licenses
+## Citations
 
 Sources
 •	The data and analysis code in this project are licensed under the MIT License.
